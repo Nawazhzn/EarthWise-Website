@@ -236,22 +236,25 @@ body {
 }
 
 /*see all btn */
-
+.btn-warning{
+  width: 100px;
+}
 
 
 
 .linkphoto{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background-image: url('img/bg2.jpg');
     background-attachment:scroll;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:auto;
+    background-position:center;
   
 }
 
 .link-content{
-  position: absolute;
+  position:fixed;
   /* width: 100%; */
   top: 8px;
   left: 16px;
@@ -262,3 +265,7 @@ body {
 .link-image{
     background-size: auto;
 }
+
+
+
+/*4 cards*/

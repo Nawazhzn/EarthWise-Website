@@ -3,6 +3,7 @@ html * {
 }
 
 /** Navbar CSS */
+
 .navbar {
   padding-top: 0px !important;
 }
@@ -51,6 +52,7 @@ html * {
 }
 
 /** Navbar Mobile (Collapse Navbar) CSS */
+
 @media screen and (max-width: 767px) {
   .navbar>.container-fluid {
     padding-top: 20px !important;
@@ -87,9 +89,10 @@ html * {
 }
 
 /** Banner CSS */
+
 .cover-image {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-image: url('img/banner-img.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -125,10 +128,6 @@ html * {
   font-size: 25px;
 }
 
-.cover-content>.col>.row>.col-lg-2 {
-  text-align: left;
-}
-
 .cover-button:hover {
   background-color: rgba(251, 210, 127, 0.2);
   color: white;
@@ -143,6 +142,89 @@ html * {
   }
   .cover-image {
     background-size: auto;
+  }
+}
+
+/** Cover Cards CSS */
+
+.card-sec>.cover-card {
+  background-color: #444444;
+  margin-top: -110px !important;
+  min-height: 240px;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.card-sec>.cover-card:hover {
+  cursor: auto !important;
+  transform: scale(1) !important;
+}
+
+.cover-card>.card-body {
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+.card-title {
+  font-family: 'Poppins';
+  font-weight: 600;
+  color: white;
+  text-align: left;
+}
+
+.card-text {
+  font-family: 'Poppins';
+  color: white;
+  text-align: left;
+  font-size: 40px;
+}
+
+.card-sup {
+  padding-top: 5px;
+  font-size: 22px;
+  line-height: 1.2;
+  color: white;
+}
+
+.arrow-icon {
+  padding-top: 17px;
+  padding-right: 15px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.col-1 {
+  margin-left: -20px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.icon-image {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.cover-card {
+  border-radius: 10px;
+}
+
+.col-auto {
+  padding-right: 0px;
+}
+
+.cover-card-container {
+  width: 80vw;
+  align-items: flex-start !important;
+}
+
+@media screen and (max-width: 991px) {
+  .card-sec>.cover-card {
+    margin-top: 20px !important;
+  }
+  .cover-image {
+    height: 100vh;
   }
 }
 

@@ -151,7 +151,7 @@ html * {
   background-color: #444444;
   margin-top: -110px !important;
   min-height: 240px;
-  height: 100% !important;
+  height: 90% !important;
   width: 100% !important;
 }
 
@@ -202,8 +202,13 @@ html * {
 
 .icon-image {
   text-align: left;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.icon-image3{
   padding-bottom: 15px;
+  padding-top: 5px;
 }
 
 .cover-card {
@@ -343,7 +348,7 @@ html * {
   transform: scale(0.95) translateY(10px);
 }
 
-/* Demo */
+/*cards */
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -359,6 +364,8 @@ body {
   margin-left: 15px;
   top: 50%;
 }
+
+
 
 /*see all btn */
 

@@ -339,7 +339,6 @@ body {
   font-size: 15px;
 }
 
-<<<<<<< HEAD
 /*cards */
 
 body {
@@ -347,7 +346,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #e9ebea;
   text-align: center;
-=======
 .news-container>.btn {
   font-family: 'Poppins';
   font-weight: 300;
@@ -359,7 +357,6 @@ body {
   padding: 10px;
   padding-left: 70px;
   padding-right: 70px;
->>>>>>> 1ab6bfa9a0ad65508b59b9b372b792cc32005dfd
 }
 
 .news-container>.btn:hover {
@@ -367,19 +364,16 @@ body {
   transition: 0.1s;
 }
 
-<<<<<<< HEAD
 
 
 /*see all btn */
 
 .btn-warning {
   width: 100px;
-=======
 @media screen and (max-width: 767px) {
   .news-container {
     width: 90vw;
   }
->>>>>>> 1ab6bfa9a0ad65508b59b9b372b792cc32005dfd
 }
 
 /** Section 3 CSS */

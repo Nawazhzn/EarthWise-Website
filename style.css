@@ -418,6 +418,92 @@ body {
   }
 }
 
+/** Gallery Section CSS */
+
+.gallery-content {
+  padding-top: 120px;
+}
+
+.gallery-content>.container-fluid>.topic {
+  color: #5A5A5A;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.gallery-content>.container-fluid>.sub-topic {
+  color: #5A5A5A;
+  font-size: 25px;
+  padding-bottom: 40px;
+}
+
+.gallery-section {
+  position: relative;
+}
+
+.gallery-section>.container-fluid>.button-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.gallery-section>.container-fluid>.button-overlay>.btn {
+  font-weight: 300;
+  font-size: 20px;
+  color: #444444;
+  background-color: #FBD27F;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 120px;
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.gallery-section>.container-fluid>.button-overlay>.btn:hover {
+  background-color: #f0bb51;
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.781), white);
+  z-index: 1;
+}
+
+.gallery-section>.container-fluid>.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gallery-section>.container-fluid>.row>.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gallery-section>.container-fluid>.row>.column>img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery-section>.container-fluid>.row>.column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
 /** Footer Section CSS */
 
 .footer-dark {

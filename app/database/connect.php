@@ -1,13 +1,13 @@
 <?php
 
-$host = '68.65.122.49';
-$user = 'digisvll_user';
-$pass = '';
-$db_name = 'digisvll_earthwise';
+$host = 'sql6.freemysqlhosting.net';
+$user = 'sql6417958';
+$pass = 'RjTSlN41yB';
+$db_name = 'sql6417958';
 
 
 $conn = new MySQLi($host, $user, $pass, $db_name);
 
-if ($conn->connect-error) {
+if ($conn->connect_error) {
     die('Database connection error: ' . $conn->connect_error);
 }

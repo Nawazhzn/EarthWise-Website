@@ -50,13 +50,17 @@
           </li> -->
           <div class="nav-divider"></div>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Chanaka</a>
+            <a class="nav-link text-white" href="#">
+              <i class="fa fa-user" style="font-size: 1rem;"></i>
+            Chanaka
+            <i class="fa fa-chevron-down" style="font-size: .8rem;"></i>
+           </a>
             <ul class="dropdown">
              <li>
-              <a class="nav-link text-white" href="#">Dashboard</a>
+              <a class="nav-linkblack text-black" href="#" >Dashboard</a>
              </li>
              <li>
-              <a class="nav-link text-white" href="#">Logout</a>
+              <a class="nav-linkred text-red" href="#">Logout</a>
              </li>
                 
             </ul>
@@ -66,7 +70,7 @@
     </div>
   </nav>
 
-  <br><br><br><br>
+  
 
   <!--* Footer Section -->
   <div class="footer-dark">
@@ -115,6 +119,22 @@
       </div>
     </footer>
   </div> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/153f93256e.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 100) {
+        nav.classList.add('bg-dark', 'shadow');
+      } else {
+        nav.classList.remove('bg-dark', 'shadow');
+      }
+    });
+  </script>
 
 
 

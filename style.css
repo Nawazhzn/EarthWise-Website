@@ -30,6 +30,28 @@ body {
   border-end-end-radius: 5px;
 }
 
+.nav-linkred {
+  font-family: 'Poppins';
+  color: red !important;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px !important;
+  padding-top: 30px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.nav-linkblack {
+  font-family: 'Poppins';
+  color: black !important;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px !important;
+  padding-top: 30px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
 .navbar-nav>.nav-item>.active {
   font-size: 24px;
   color: black !important;
@@ -49,6 +71,28 @@ body {
   margin-left: 50px !important;
 }
 
+.nav-linkblack:hover {
+  font-size: 24px;
+  color: black !important;
+  background-color: #f0bb51;
+  transition: 0.1s;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  margin-left: 50px !important;
+}
+
+.nav-linkred:hover {
+  font-size: 30px;
+  color: black !important;
+  background-color: #f0bb51;
+  transition: 0.1s;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  margin-left: 50px !important;
+}
+
+
+
 .nav-logo {
   float: left;
   width: 250px;
@@ -65,9 +109,15 @@ body {
 
 .dropdown {
   position: absolute;
-  
+  top: 65px;
   right: auto;
   width: auto;
+  display: none;
+  
+}
+
+.nav-item:hover>.dropdown {
+  display: block;
 }
 
 /** Navbar Mobile (Collapse Navbar) CSS */
@@ -115,6 +165,7 @@ body {
   .nav-divider {
     display: none;
   }
+  
   
 }
 

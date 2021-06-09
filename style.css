@@ -56,16 +56,30 @@ body {
   padding-top: 30px;
 }
 
+.nav-divider {
+  border-left: 1px solid #EFEFEF;
+  margin-top: 20px;
+  margin-left: 55px;
+  height: 50px;
+}
+
 /** Navbar Mobile (Collapse Navbar) CSS */
 
 @media screen and (max-width: 767px) {
+  .bg-dark {
+    padding-bottom: 0px;
+  }
+  .navbar-toggler {
+    border: none;
+    margin-right: 18px;
+  }
   .navbar>.container-fluid {
     padding-top: 20px !important;
     padding-bottom: 0px !important;
     padding-left: 0px;
     padding-right: 0px;
     width: 100vw;
-    background-color: black;
+    background-color: #212529;
   }
   .nav-logo {
     float: left;
@@ -91,6 +105,9 @@ body {
     border-end-end-radius: 0px;
     margin-left: 0px !important;
   }
+  .nav-divider {
+    display: none;
+  }
 }
 
 /** Banner CSS */
@@ -106,8 +123,9 @@ body {
 
 .cover-content {
   position: absolute;
+  width: 100%;
   top: 8px;
-  left: 16px;
+  left: 0px;
   padding-left: 10.5%;
   padding-top: 12%;
 }
@@ -350,6 +368,12 @@ body {
 .news-container>.btn:hover {
   background-color: #f0bb51;
   transition: 0.1s;
+}
+
+@media screen and (max-width: 767px) {
+  .news-container {
+    width: 90vw;
+  }
 }
 
 /** Section 3 CSS */

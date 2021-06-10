@@ -586,6 +586,22 @@ body {
     max-width: 50%;
   }
 }
+/**news page CSS*/
+.post-slider {
+  border: 1px solid red;
+}
+
+.post-slider>.post-wrapper {
+  width: 84%;
+  height: 350px;
+  margin: 0px auto;
+  border: 1px dashed red;
+}
+.post-slider .post-wrapper .post{
+  display: inline-block;
+  background: #f0bb51;
+}
+
 
 /** Footer Section CSS */
 
@@ -709,4 +725,5 @@ footer>.footer-container {
   .footer-col-3 {
     padding-top: 40px;
   }
+
 }

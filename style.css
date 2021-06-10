@@ -598,6 +598,9 @@ body {
   border: 1px dashed red;
 }
 .post-slider .post-wrapper .post{
+  width: 84%;
+  height: 350px;
+  margin: ;
   display: inline-block;
   background: #f0bb51;
 }

@@ -600,7 +600,7 @@ body {
 .post-slider .post-wrapper .post{
   width: 84%;
   height: 350px;
-  margin: ;
+  margin: 0px;
   display: inline-block;
   background: #f0bb51;
 }

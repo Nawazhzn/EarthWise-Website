@@ -30,6 +30,28 @@ body {
   border-end-end-radius: 5px;
 }
 
+.nav-linkred {
+  font-family: 'Poppins';
+  color: red !important;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px !important;
+  padding-top: 30px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.nav-linkblack {
+  font-family: 'Poppins';
+  color: black !important;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px !important;
+  padding-top: 30px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
 .navbar-nav>.nav-item>.active {
   font-size: 24px;
   color: black !important;
@@ -49,6 +71,28 @@ body {
   margin-left: 50px !important;
 }
 
+.nav-linkblack:hover {
+  font-size: 24px;
+  color: black !important;
+  background-color: #f0bb51;
+  transition: 0.1s;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  margin-left: 50px !important;
+}
+
+.nav-linkred:hover {
+  font-size: 30px;
+  color: black !important;
+  background-color: #f0bb51;
+  transition: 0.1s;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  margin-left: 50px !important;
+}
+
+
+
 .nav-logo {
   float: left;
   width: 250px;
@@ -61,6 +105,37 @@ body {
   margin-top: 20px;
   margin-left: 55px;
   height: 50px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 65px;
+  right: auto;
+  width: auto;
+  display: none;
+  
+}
+
+.nav-item:hover>.dropdown {
+  display: block;
+}
+
+/**news page CSS*/
+.post-slider {
+  border: 1px solid red;
+}
+
+.post-slider>.post-wrapper {
+  width: 84%;
+  height: 350px;
+  margin: 0px auto; 
+  border: 1px dashed red; 
+}
+.post-slider>.post-wrapper>.post {
+  width: 350px;
+  height: 300px;
+  display: inline-block;
+  background: #f0bb51;
 }
 
 /** Navbar Mobile (Collapse Navbar) CSS */
@@ -108,6 +183,18 @@ body {
   .nav-divider {
     display: none;
   }
+  .dropdown {
+    position: static;
+    display: block;
+    width: 100%;
+    background: inherit;
+    display: none;
+  }
+
+  .nav-item:hover>.dropdown {
+    display: block;
+  }
+  
 }
 
 /** Banner CSS */
@@ -528,6 +615,8 @@ body {
   }
 }
 
+
+
 /** Footer Section CSS */
 
 .footer-dark {
@@ -650,4 +739,5 @@ footer>.footer-container {
   .footer-col-3 {
     padding-top: 40px;
   }
+
 }

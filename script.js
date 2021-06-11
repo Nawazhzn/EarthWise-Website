@@ -13,16 +13,34 @@ $(function() {
         target = $(this).attr('href');
         $('.panel__forms > form').not(target).hide();
         $(target).fadeIn(500);
-    });
-
-    $('.panel__prev-btn').on('click', function(e) {
-        $('.panel, .panel_blur').fadeOut(300);
-    });
+    });  
 });
+
+$(document).ready(function() {
+    $('navbar-toggler').on('click', function() {
+        $('.navbar').toggleClass('showing');
+        $('.navbar-nav').toggleClass('showing');
+    });
+    $('.post-wrapper').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
+
+
+$('.panel__prev-btn').on('click', function(e) {
+    $('.panel, .panel_blur').fadeOut(300);
+});
+
 
 $.validate({
 	modules : 'security',
 	errorMessageClass: 'form__error',
 	validationErrorMsgAttribute: 'data-error'
+
 });
+
+
 

@@ -69,19 +69,20 @@
       </div>
     </div>
   </nav>
-<br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
   
 <div class="page-wrapper">
 
    <div class="post-slider">
     <h1 class="slider-title">Trending News</h1>
+
     <div class="post-wrapper">
-    <div class="post">1</div>
-    <div class="post">2</div>
-    <div class="post">3</div>
-    <div class="post">4</div>
-    <div class="post">5</div>
+     <div class="post">1</div>
+     <div class="post">2</div>
+     <div class="post">3</div>
+     <div class="post">4</div>
+     <div class="post">5</div>
     </div>
 
    </div>
@@ -89,53 +90,7 @@
 </div>
   
 
-  <!--* Footer Section -->
-  <div class="footer-dark">
-    <footer>
-      <div class="container-fluid footer-container">
-        <div class="row">
-          <div class="col-sm-12 col-md-8 col-lg-3 footer-col-1">
-            <img src="img/earth-wise-logo.png" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.</p>
-          </div>
-          <div class="col-md-4 col-lg-6 footer-col-2">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="article.php">Article</a></li>
-              <li><a href="#">Explore</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-3 footer-col-3">
-            <h3>Subscribe to our Newsletter!</h3>
-            <form>
-              <div class="form-group">
-                <input type="email" class="sub-email" placeholder="Enter Your Email"><br />
-                <button type="submit" class="btn">Subscribe</button>
-              </div>
-            </form>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-          </div>
-          <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
-                class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
-              href="#"><i class="icon ion-social-instagram"></i></a></div>
-        </div>
-      </div>
-      <div class="container-fluid copyright-section">
-        <div class="container-fluid copyright-content">
-          <div class="row">
-            <div class="col">
-              <p>EarthWise © 2021. All Rights Reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div> 
+ 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
@@ -152,6 +107,9 @@
       }
     });
   </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 
 

@@ -183,7 +183,17 @@ body {
   .nav-divider {
     display: none;
   }
-  
+  .dropdown {
+    position: static;
+    display: block;
+    width: 100%;
+    background: inherit;
+    display: none;
+  }
+
+  .nav-item:hover>.dropdown {
+    display: block;
+  }
   
 }
 

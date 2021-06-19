@@ -120,6 +120,13 @@ body {
   display: block;
 }
 
+.logout {
+  color: red;
+}
+
+
+
+
 /**news page CSS*/
 .post-slider {
   border: 1px solid red;

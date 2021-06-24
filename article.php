@@ -72,6 +72,47 @@
   </nav>
 
   
+<!--* Content Section -->
+
+  <div class="wrapper-art">
+  <header class="header"><h1>Innovators of the new genre</h1></header>
+  <figure class="featured-art-image-1">
+      <img src="img/Article/turtle.jpg" alt="">
+   </figure>
+  
+  <article class="article article-1">
+    <h2>Technical information</h2>
+    <p>In 1985 Aldus Corporation launched its first desktop publishing program Aldus PageMaker for Apple Macintosh computers.</p>
+  </article>
+  <figure class="featured-art-image-2">
+      <img src="img/Article/forest.jpg" alt="">
+   </figure>
+  
+  <article class="article article-2">
+    <h2>Variants</h2>
+    <p>Released in 1987 for PCs running Windows 1.0.</p>
+  </article>
+  <figure class="featured-art-image-3">
+      <img src="img/Article/polar-bear.jpg" alt="">
+   </figure>
+ 
+  <article class="article article-3">
+    <h2>When not to use it</h2>
+    <p>The toppings you may chose for that TV dinner pizza slice when you forgot to shop for foods, the paint you may slap on your face to impress the new boss is your business. But what about your daily bread?</p>
+  </article>
+  <figure class="featured-art-image-4">
+      <img src="img/Article/garbag.jpg" alt="">
+   </figure>
+ 
+  <article class="article article-4">
+    <h2>So Lorem Ipsum is bad</h2>
+    <p>One of the villagers, Kristina Halvorson from Adaptive Path, holds steadfastly to the notion that design can’t be tested without real content.</p>
+  </article>
+</div>
+
+
+
+
 
   <!--* Footer Section -->
   <div class="footer-dark">

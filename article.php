@@ -78,18 +78,34 @@ include(ROOT_PATH . "/app/database/db.php")
       </div>
     </div>
   </nav>
-
+  <br><br><br> <br> <br>
   
 <!--* Content Section -->
-
-  <div class="wrapper-art">
-  <header class="header"><h1>Innovators of the new genre</h1></header>
+<?php
+$postQuery="SELECT * FROM posts";
+$runPQ=mysqli_query($conn,$postQuery);
+while($post=mysqli_fetch_assoc($runPQ)){
+  ?>
+  <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+              <div class="col-md-5" style="background-image: url('img/Article/tree.jpg');background-size: cover">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title"><?=$post['title']?></h5>
+                  <p class="card-text text-truncate"><?=$post['content']?></p>
+                  <p class="card-text"><small class="text-muted">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- <div class="wrapper-art">
+  <header class="header"><h1><?=$post['title']?></h1></header>
   <figure class="featured-art-image-1">
       <img src="img/Article/turtle.jpg" alt="">
-   </figure>
-  
-  <article class="article article-1">
-    <h2>Technical information</h2>
+   </figure> 
+   <article class="article article-1">
+    <h2><?=$post['title']?></h2>
     <p>In 1985 Aldus Corporation launched its first desktop publishing program Aldus PageMaker for Apple Macintosh computers.</p>
   </article>
   <figure class="featured-art-image-2">
@@ -116,7 +132,16 @@ include(ROOT_PATH . "/app/database/db.php")
     <h2>So Lorem Ipsum is bad</h2>
     <p>One of the villagers, Kristina Halvorson from Adaptive Path, holds steadfastly to the notion that design can’t be tested without real content.</p>
   </article>
-</div>
+   </div> -->
+
+  <?php
+}
+?>
+
+ 
+  
+  
+
 
 
 

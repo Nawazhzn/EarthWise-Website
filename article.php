@@ -1,3 +1,7 @@
+<?php 
+include("path.php");
+include(ROOT_PATH . "/app/database/db.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +33,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
+        <li class="nav-item">
+            <a class="nav-link active text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">News</a>
@@ -50,20 +54,24 @@
             <a class="nav-link text-white" href="#">Login</a>
           </li> -->
           <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <i class="fa fa-user" style="font-size: 1rem;"></i>
-            Chanaka
-            <i class="fa fa-chevron-down" style="font-size: .8rem;"></i>
-           </a>
-            <ul class="dropdown">
-             <li>
-              <a class="nav-linkblack text-black" href="#" >Dashboard</a>
-             </li>
-             <li>
-              <a class="nav-linkred text-red" href="#">Logout</a>
-             </li>
-                
+          <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a class="nav-link text-white" href="#">
+            <i class="fa fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul >
+            <?php if($_SESSION['admin']): ?>
+              <li><a href="<?php echo BASE_URL . '/admin/dashboard.php' ?>">Dashboard</a></li>
+            <?php endif; ?>
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+          </ul>
+        </li>
+      <?php else: ?>
+        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
+        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
+      <?php endif; ?>
             </ul>
           </li>
         </ul>

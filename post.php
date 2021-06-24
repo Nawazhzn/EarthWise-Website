@@ -70,75 +70,38 @@ include(ROOT_PATH . "/app/database/db.php")
     </div>
   </nav>
   <br><br><br> <br> <br>
-  
-<!--* Content Section -->
-<?php
-$postQuery="SELECT * FROM posts";
-$runPQ=mysqli_query($conn,$postQuery);
-while($post=mysqli_fetch_assoc($runPQ)){
-  ?>
-  <div class="card mb-3" style="max-width: 800px;">
-  <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
-            <div class="row g-0">
-              <div class="col-md-5" style="background-image: url('img/Article/tree.jpg');background-size: cover">
-              </div>
-              <div class="col-md-7">
+
+
+
+  <div>
+    <div class="container m-auto mt-3 row">
+        <div class="col-8">
+          <?php
+          $post_id=$_GET['id'];
+          $postQuery="SELECT * FROM posts WHERE id=$post_id";
+          $runPQ=mysqli_query($conn,$postQuery);
+          $post=mysqli_fetch_assoc($runPQ);
+
+          ?>
+            <div class="card mb-3">
+                
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
-                  <p class="card-text text-truncate"><?=$post['content']?></p>
-                  <p class="card-text"><small class="text-muted">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
+                  <span class="badge bg-primary ">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></span>
+                  <span class="badge bg-danger">Topic</span>
+                  <div class="border-bottom mt-3"></div>
+                  <img src="img/Article/tree.jpg" class="img-fluid mb-2 mt-2" alt="Responsive image">
+                  <p class="card-text"><?=$post['content']?></p>
+                  
+
                 </div>
               </div>
-            </div>
-</a>
-          </div>
-  <!-- <div class="wrapper-art">
-  <header class="header"><h1><?=$post['title']?></h1></header>
-  <figure class="featured-art-image-1">
-      <img src="img/Article/turtle.jpg" alt="">
-   </figure> 
-   <article class="article article-1">
-    <h2><?=$post['title']?></h2>
-    <p>In 1985 Aldus Corporation launched its first desktop publishing program Aldus PageMaker for Apple Macintosh computers.</p>
-  </article>
-  <figure class="featured-art-image-2">
-      <img src="img/Article/forest.jpg" alt="">
-   </figure>
+        </div>
+    </div>
+  </div>
+        
+
   
-  <article class="article article-2">
-    <h2>Variants</h2>
-    <p>Released in 1987 for PCs running Windows 1.0.</p>
-  </article>
-  <figure class="featured-art-image-3">
-      <img src="img/Article/polar-bear.jpg" alt="">
-   </figure>
- 
-  <article class="article article-3">
-    <h2>When not to use it</h2>
-    <p>The toppings you may chose for that TV dinner pizza slice when you forgot to shop for foods, the paint you may slap on your face to impress the new boss is your business. But what about your daily bread?</p>
-  </article>
-  <figure class="featured-art-image-4">
-      <img src="img/Article/garbag.jpg" alt="">
-   </figure>
- 
-  <article class="article article-4">
-    <h2>So Lorem Ipsum is bad</h2>
-    <p>One of the villagers, Kristina Halvorson from Adaptive Path, holds steadfastly to the notion that design can’t be tested without real content.</p>
-  </article>
-   </div> -->
-
-  <?php
-}
-?>
-
- 
-  
-  
-
-
-
-
-
 
   <!--* Footer Section -->
   <div class="footer-dark">

@@ -1,7 +1,3 @@
-<?php 
-include("path.php");
-include(ROOT_PATH . "/app/database/db.php")
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,18 +29,31 @@ include(ROOT_PATH . "/app/database/db.php")
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
+<<<<<<< HEAD
         <li class="nav-item">
             <a class="nav-link active text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
+=======
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Home</a>
+>>>>>>> d5a1457a4cce65f3294af8b1861fcef4e937303f
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="article.php">Article</a>
+            <a class="nav-link active text-white" href="#">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
           </li>
+          <!-- <div class="nav-divider"></div>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Sign Up</a>
+          </li>
+          <div class="nav-divider"></div>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Login</a>
+          </li> -->
           <div class="nav-divider"></div>
           <?php if (isset($_SESSION['id'])): ?>
         <li>

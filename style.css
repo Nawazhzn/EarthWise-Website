@@ -127,23 +127,6 @@ body {
 
 
 
-/**news page CSS*/
-.post-slider {
-  border: 1px solid red;
-}
-
-.post-slider>.post-wrapper {
-  width: 84%;
-  height: 350px;
-  margin: 0px auto; 
-  border: 1px dashed red; 
-}
-.post-slider>.post-wrapper>.post {
-  width: 350px;
-  height: 300px;
-  display: inline-block;
-  background: #f0bb51;
-}
 
 /** Navbar Mobile (Collapse Navbar) CSS */
 
@@ -750,6 +733,7 @@ footer>.footer-container {
 }
 
 
+<<<<<<< HEAD
 
 /*Article Content section*/
 *, *:before, *:after { 
@@ -881,3 +865,5 @@ header:after {
   
   
 }
+=======
+>>>>>>> f67610d9034742d8039ee6a282c84e736a8fead4

@@ -42,7 +42,7 @@
         <link rel="icon" type="image/png" href="img/favicon.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-         <link rel="stylesheet" href="phpgallery.css">
+         <link rel="stylesheet" href="php gallery/gallery.css">
     </head>
 
 
@@ -61,6 +61,7 @@
         <li class="nav-item">
             <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link text-white" href="#">News</a>
           </li>
@@ -69,7 +70,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
-          </li>
+          </li> -->
           
           <div class="nav-divider"></div>
           <?php if (isset($_SESSION['id'])): ?>
@@ -99,6 +100,9 @@
 
     <div class="bgcon">
 	<body>
+   
+   <h1 class="maintitle">Image Gallery</h1>
+
 		<div class="container">
             <div class="row">
                 <div class="col-md-12" align="center">

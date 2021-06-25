@@ -1,5 +1,6 @@
 <?php
-    $conn = new mysqli("localhost", "root", "", "imageGallery");
+    include("path.php");
+    include(ROOT_PATH . "/app/database/db.php");
 
     if (isset($_POST['delImage'])) {
         $id = $conn->real_escape_string($_POST['id']);
@@ -186,7 +187,7 @@
 
                    if (!fileTypeAllowed.test(fileName))
                         $("#error").html('Only images are allowed!');
-                   else if (fileSize < 500000)
+                   else if (fileSize > 500000)
                        $("#error").html('Your file is too big! Max allowed size is: 500KB');
                    else {
                        $("#error").html("");

@@ -37,7 +37,7 @@ include(ROOT_PATH . "/app/database/db.php")
             <a class="nav-link active text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">News</a>
+            <a class="nav-link text-white" href="news.php">News</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="article.php">Article</a>
@@ -345,7 +345,7 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="gallery-section">
     <div class="container-fluid">
       <div class="button-overlay">
-        <button type="button" class="btn">VIEW ALL</button>
+       <a href="galleryindex.php" button type="button" class="btn">VIEW ALL</button></a>
       </div>
       <div class="photo-overlay"></div>
       <div class="row">

@@ -35,7 +35,7 @@ body {
   color: red !important;
   font-weight: 400;
   font-size: 24px;
-  margin-left: 50px !important;
+  margin-left: 500px !important;
   padding-top: 30px;
   border-end-start-radius: 5px;
   border-end-end-radius: 5px;
@@ -560,6 +560,7 @@ body {
   padding: 10px;
   padding-left: 70px;
   padding-right: 70px;
+  
 }
 
 .gallery-section>.container-fluid>.button-overlay>.btn:hover {

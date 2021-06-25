@@ -1,0 +1,346 @@
+/** Navbar CSS */
+
+.navbar {
+    padding-top: 0px !important;
+  }
+  
+  .navbar>.container-fluid {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    width: 80vw;
+    align-items: flex-start;
+  }
+  
+  .nav-link {
+    font-family: 'Poppins';
+    color: white !important;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 50px !important;
+    padding-top: 30px;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+  
+  .nav-linkred {
+    font-family: 'Poppins';
+    color: red !important;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 50px !important;
+    padding-top: 30px;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+  
+  .nav-linkblack {
+    font-family: 'Poppins';
+    color: black !important;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 50px !important;
+    padding-top: 30px;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+  
+  .navbar-nav>.nav-item>.active {
+    font-size: 24px;
+    color: black !important;
+    background-color: #FBD27F;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+    margin-left: 50px !important;
+  }
+  
+  .nav-link:hover {
+    font-size: 24px;
+    color: black !important;
+    background-color: #f0bb51;
+    transition: 0.1s;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+    margin-left: 50px !important;
+  }
+  
+  .nav-linkblack:hover {
+    font-size: 24px;
+    color: black !important;
+    background-color: #f0bb51;
+    transition: 0.1s;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+    margin-left: 50px !important;
+  }
+  
+  .nav-linkred:hover {
+    font-size: 30px;
+    color: black !important;
+    background-color: #f0bb51;
+    transition: 0.1s;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+    margin-left: 50px !important;
+  }
+  
+  
+  
+  .nav-logo {
+    float: left;
+    width: 250px;
+    padding: 10px;
+    padding-top: 30px;
+  }
+  
+  .nav-divider {
+    border-left: 1px solid #EFEFEF;
+    margin-top: 20px;
+    margin-left: 55px;
+    height: 50px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 65px;
+    right: auto;
+    width: auto;
+    display: none;
+    
+  }
+  
+  .nav-item:hover>.dropdown {
+    display: block;
+  }
+  
+  .logout {
+    color: red;
+  }
+  
+  
+  
+  
+  
+  /** Navbar Mobile (Collapse Navbar) CSS */
+  
+  @media screen and (max-width: 767px) {
+    .bg-dark {
+      padding-bottom: 0px;
+    }
+    .navbar-toggler {
+      border: none;
+      margin-right: 18px;
+    }
+    .navbar>.container-fluid {
+      padding-top: 20px !important;
+      padding-bottom: 0px !important;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100vw;
+      background-color: #212529;
+    }
+    .nav-logo {
+      float: left;
+      width: 250px;
+      padding-top: 0px;
+      padding-bottom: 20px;
+    }
+    .nav-link {
+      margin-left: 0px !important;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-end-start-radius: 0px;
+      border-end-end-radius: 0px;
+    }
+    .navbar-nav>.nav-item>.active {
+      font-family: 'Poppins';
+      border-end-start-radius: 0px;
+      border-end-end-radius: 0px;
+      margin-left: 0px !important;
+    }
+    .nav-link:hover {
+      border-end-start-radius: 0px;
+      border-end-end-radius: 0px;
+      margin-left: 0px !important;
+    }
+    .nav-divider {
+      display: none;
+    }
+    .dropdown {
+      position: static;
+      display: block;
+      width: 100%;
+      background: inherit;
+      display: none;
+    }
+  
+    .nav-item:hover>.dropdown {
+      display: block;
+    }
+    
+  }
+
+
+/*Css for image gallery upload area*/
+
+.bgcon{
+    background-color: grey;
+    font-family: 'Poppins';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+    #dropZone {
+        border: 3px dashed black;
+        padding: 50px;
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    #files {
+        border: 1px dotted #0088cc;
+        padding: 20px;
+        width: 200px;
+        display: none;
+    }
+
+    #error {
+        color: red;
+    }
+
+    .container, .row {
+        margin-top: 50px;
+    }
+
+    #uploadedFiles img {
+        width: 100% !important;
+    }
+
+
+
+/** Footer Section CSS */
+
+.footer-dark {
+    padding-top: 100px;
+    color: #f0f9ff;
+    background-color: #444444;
+  }
+  
+  footer>.footer-container {
+    width: 80vw;
+    padding-bottom: 80px;
+  }
+  
+  .footer-col-1 {
+    text-align: left;
+  }
+  
+  .footer-col-1>img {
+    width: 300px;
+    padding-bottom: 40px;
+  }
+  
+  .footer-col-1>p {
+    font-size: 18px;
+  }
+  
+  .footer-col-2>ul {
+    list-style: none;
+  }
+  
+  .footer-col-2>ul>li {
+    margin-bottom: 35px;
+  }
+  
+  .footer-col-2>ul>li>a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .footer-col-2>ul>li>a:hover {
+    color: #FBD27F;
+  }
+  
+  .footer-col-3 {
+    text-align: left;
+  }
+  
+  .footer-col-3>h3 {
+    font-size: 22px;
+    padding-bottom: 8px;
+  }
+  
+  .footer-col-3>form>.form-group>input {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-col-3>form>.form-group>button {
+    font-weight: 300;
+    font-size: 20px;
+    color: #444444;
+    background-color: #FBD27F;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  
+  .footer-col-3>form>.form-group>button:hover {
+    background-color: #f0bb51;
+    transition: 0.1s;
+  }
+  
+  .footer-col-3>.fa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #444444;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .footer-col-3>.fa:hover {
+    background-color: #FBD27F;
+    transition: 0.1s;
+  }
+  
+  .copyright-section {
+    background-color: #383838;
+    padding-top: 20px;
+    text-align: left;
+  }
+  
+  .copyright-content {
+    width: 80vw;
+  }
+  
+  .copyright-content>.row>.col>p {
+    font-size: 15px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .footer-col-2>ul {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    .footer-col-3 {
+      padding-top: 40px;
+    }
+  
+  }
+

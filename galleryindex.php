@@ -1,57 +1,3 @@
- <!--* Navbar  -->
- <link rel="stylesheet" href="phpgallery.css">
- <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"></a>
-      
-      <a href="<?php echo BASE_URL . '/index.php' ?>"><img src="img/earth-wise-logo.png" alt="logo" class="nav-logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mx-auto"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="news.php">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="article.php">Article</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white aa" href="#">Explore</a>
-          </li>
-          <div class="nav-divider"></div>
-          <?php if (isset($_SESSION['id'])): ?>
-        <li>
-          <a class="nav-link text-white" href="#">
-            <i class="fa fa-user"></i>
-            <?php echo $_SESSION['username']; ?>
-            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
-          </a>
-          <ul >
-            <?php if($_SESSION['admin']): ?>
-              <li><a href="<?php echo BASE_URL . '/admin/dashboard.php' ?>">Dashboard</a></li>
-            <?php endif; ?>
-            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
-          </ul>
-        </li>
-      <?php else: ?>
-        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
-        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
-      <?php endif; ?>
-          
-        </ul>
-        
-      </div>
-    </div>
-  </nav>
-
-
-
 <?php
     $conn = new mysqli("localhost", "root", "", "imageGallery");
 
@@ -89,21 +35,73 @@
     $sql = $conn->query("SELECT id FROM photos");
     $numRows = $sql->num_rows;
 ?>
+
 <html>
 	<head>
-		<title> File Upload Script</title>
-		<link rel="stylesheet" href="phpgallery.css">
-
-
-		</style>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title> Image Gallery</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="phpgallery.css">
     </head>
+
+
+ <!--* Navbar  -->
+ <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
+    <div class="container-fluid"  >
+      <a class="navbar-brand" href="#"></a>
+      <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="#">Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white aa" href="#">Explore</a>
+          </li>
+          
+          <div class="nav-divider"></div>
+          <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a class="nav-link text-white" href="#">
+            <i class="fa fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul >
+            
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+          </ul>
+        </li>
+      <?php else: ?>
+        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
+        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
+      <?php endif; ?>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+
     <div class="bgcon">
 	<body>
 		<div class="container">
             <div class="row">
                 <div class="col-md-12" align="center">
-                <img src="images/logo.png"><br><br>
                 <div id="dropZone">
                     <h1 >Drag & Drop Files...</h1>
                     <input type="file" id="fileupload" name="attachments[]" multiple>
@@ -117,9 +115,7 @@
 		</div>
         <div class="container" id="uploadedFiles">
             <div class="row">
-
                 <!-- <div class="col-md-3 myImg"></div> -->
-
             </div>
         </div>
         </div>
@@ -129,8 +125,6 @@
 		<script src="js/jquery.iframe-transport.js" type="text/javascript"></script>
 		<script src="js/jquery.fileupload.js" type="text/javascript"></script>
         <script type="text/javascript">
-
-
             $(document).ready(function () {
                 getImages(0, <?php echo $numRows ?>);
             });
@@ -217,10 +211,8 @@
                 $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
             }
         </script>
-
-
-        <!--* Footer Section -->
-  <div class="footer-dark">
+ <!--* Footer Section -->
+ <div class="footer-dark">
     <footer>
       <div class="container-fluid footer-container">
         <div class="row">
@@ -265,6 +257,9 @@
         </div>
       </div>
     </footer>
-  </div>
+  </div> 
+
+
+
 	</body>
 </html>

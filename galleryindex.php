@@ -59,7 +59,7 @@
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
+            <a class="nav-link text-white" href="index.php">Home</a>
           </li>
           <!--
           <li class="nav-item">
@@ -186,7 +186,7 @@
 
                    if (!fileTypeAllowed.test(fileName))
                         $("#error").html('Only images are allowed!');
-                   else if (fileSize > 500000)
+                   else if (fileSize < 500000)
                        $("#error").html('Your file is too big! Max allowed size is: 500KB');
                    else {
                        $("#error").html("");

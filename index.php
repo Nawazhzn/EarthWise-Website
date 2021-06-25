@@ -40,7 +40,7 @@ include(ROOT_PATH . "/app/database/db.php")
             <a class="nav-link text-white" href="#">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="article.php">Article</a>
+            <a class="nav-link text-white" href="article page/article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>

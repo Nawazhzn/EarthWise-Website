@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Earth Wise</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="news page/news.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link
@@ -19,7 +19,7 @@
   <!--* Navbar  -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +29,13 @@
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
+            <a class="nav-link text-white" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">News</a>
+            <a class="nav-link active text-white" href="#">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" href="#">Article</a>
+            <a class="nav-link text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>

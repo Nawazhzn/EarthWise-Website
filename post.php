@@ -75,7 +75,7 @@ include(ROOT_PATH . "/app/database/db.php")
 
   <div>
     <div class="container m-auto mt-3 row">
-        <div class="col-8">
+        <div class="col-8" style="width: fit-content;">
           <?php
           $post_id=$_GET['id'];
           $postQuery="SELECT * FROM posts WHERE id=$post_id";
@@ -83,7 +83,7 @@ include(ROOT_PATH . "/app/database/db.php")
           $post=mysqli_fetch_assoc($runPQ);
 
           ?>
-            <div class="card mb-3">
+            <div class="card mb-3" >
                 
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>

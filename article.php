@@ -1,6 +1,14 @@
 <?php 
 include("path.php");
-include(ROOT_PATH . "/app/database/db.php")
+include(ROOT_PATH . "/app/database/db.php");
+if(isset($_GET['page'])){
+  $page=$_GET['page'];
+
+}else{
+  $page=1;
+}
+$post_per_page=5;
+$result=($page-1)*$post_per_page;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,14 +81,14 @@ include(ROOT_PATH . "/app/database/db.php")
   
 <!--* Content Section -->
 <?php
-$postQuery="SELECT * FROM posts";
+$postQuery="SELECT * FROM posts LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
 while($post=mysqli_fetch_assoc($runPQ)){
   ?>
-  <div class="card mb-3" style="max-width: 800px;">
+  <div class="card mb-3" style="max-width: 100%;">
   <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
             <div class="row g-0">
-              <div class="col-md-5" style="background-image: url('img/Article/tree.jpg');background-size: cover">
+              <div class="col-md-2" style="background-image: url('img/Article/tree.jpg');background-size: cover">
               </div>
               <div class="col-md-7">
                 <div class="card-body">
@@ -130,6 +138,27 @@ while($post=mysqli_fetch_assoc($runPQ)){
   <?php
 }
 ?>
+
+
+
+<?php
+
+?>
+
+
+<nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
 
  
   

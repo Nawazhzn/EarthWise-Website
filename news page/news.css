@@ -115,9 +115,28 @@
 .logout {
   color: red;
 }
-
-
-
+.news-header{
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 50px;
+  position:absolute;
+  top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .news-header{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    position:absolute;
+    top: 100px;
+  }
+}
 
 
 /** Navbar Mobile (Collapse Navbar) CSS */
@@ -318,19 +337,10 @@
   .news-container {
     width: 90vw;
   }
-  .widget{
-    width: 90vw;
-  }
-
+  
 }
 
-.news-header{
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 50px;
-}
+
 
 /*verticle news section*/
 
@@ -363,8 +373,14 @@
 }
 
 .widget{
-  width: 500px;
-  align-content: right;
+  width: 400px;
+  background:fixed;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .widget{
+      width: 400px;
+  }
 }
 
 

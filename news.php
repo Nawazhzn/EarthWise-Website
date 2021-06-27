@@ -115,7 +115,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="">
-                                                <img class="img-fluid w-100"
+                                                <img class="img-fluid w-100 height:110"
                                                      src="img/news/protest.jpeg"
                                                      alt="protest">
                                             </a>

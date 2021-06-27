@@ -325,7 +325,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="">Extreme-climate</a>
                                         <!--title-->
                                         <a href="">
-                                            <h2 class="h5 text-white my-1">Climate displace more people than conflict</h2>
+                                            <h2 class="h6 text-white my-1">Climate displace more people than conflict</h2>
                                         </a>
                                     </div>
                                 </div>

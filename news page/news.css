@@ -125,6 +125,7 @@
   position:absolute;
   top: 100px;
 }
+
 @media screen and (max-width: 767px) {
   .news-header{
     width: 100%;
@@ -132,7 +133,7 @@
     text-align: center;
     background: #1abc9c;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     position:absolute;
     top: 100px;
   }
@@ -373,7 +374,7 @@
 }
 
 .widget{
-  width: 400px;
+  width: 300px;
   background:fixed;
 }
 

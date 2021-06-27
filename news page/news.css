@@ -89,7 +89,7 @@
   float: left;
   width: 250px;
   padding: 10px;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .nav-divider {
@@ -128,7 +128,7 @@
 
 @media screen and (max-width: 767px) {
   .news-header{
-    width: 120%;
+    width: 100%;
     padding: 30px;
     text-align: center;
     background: #1abc9c;

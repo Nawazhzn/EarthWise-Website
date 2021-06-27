@@ -318,6 +318,10 @@
   .news-container {
     width: 90vw;
   }
+  .widget{
+    width: 90vw;
+  }
+
 }
 
 .news-header{

@@ -123,7 +123,7 @@
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title-->
                                             <a href="">
-                                                <h2 class="h3 post-title text-white my-1">Participants hold placards as they take part in a protest march demanding urgent measures to combat climate change, in Kolkata, India,</h2>
+                                                <h2 class="h3 post-title text-white my-1">Protest march demanding urgent measures to combat climate change</h2>
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
@@ -249,11 +249,11 @@
                                     </div>
                                     <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                         <!-- category -->
-                                        <a class="p-1 badge badge-primary rounded-0" href="">Deforestation</a>
+                                        <a class="p-1 badge badge-primary rounded-0" href="">Brazil's Amazon:</a>
 
                                         <!--title-->
                                         <a href="https://www.bbc.com/news/world-latin-america-55130304">
-                                            <h2 class="h5 text-white my-1">Brazil's Amazon: Deforestation 'surges to 12-year high'</h2>
+                                            <h2 class="h5 text-white my-1 " style="size:10px;"> Deforestation 'surges to 12-year high'</h2>
                                         </a>
                                     </div>
                                 </div>
@@ -277,7 +277,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="">Ice and dire</a>
                                         <!--title-->
                                         <a href="https://www.mirror.co.uk/news/uk-news/polar-bear-clings-tight-iceberg-882963">
-                                            <h2 class="h5 text-white my-1"> Polar bear clings on tight as the iceberg he's resting on melts away</h2>
+                                            <h2 class="h5 text-white my-1"> Polar bear clings onto melting iceberg</h2>
                                         </a>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="https://www.aljazeera.com/news/2019/6/30/as-drought-hits-crops-india-pm-calls-for-water-conservation-push">Drought in India</a>
                                         <!--title-->
                                         <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">As drought hits crops, India PM calls for water conservation push</h2>
+                                            <h2 class="h5 text-white my-1">Drought hits crops in India </h2>
                                         </a>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="">Extreme-climate</a>
                                         <!--title-->
                                         <a href="">
-                                            <h2 class="h5 text-white my-1">2020-more-people-displaced-by-extreme-climate-than-conflict</h2>
+                                            <h2 class="h5 text-white my-1">Climate displace more people than conflict</h2>
                                         </a>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@
     
 <!-- start feedwind code (used freewind for live news update)--> 
 <div class="widget">
- <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" 
+<script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" 
       preloader-text="Loading" data-fw-param="147605/"></script> 
 </div>
  <!-- end feedwind code -->

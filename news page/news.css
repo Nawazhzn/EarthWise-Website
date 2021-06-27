@@ -128,7 +128,7 @@
 
 @media screen and (max-width: 767px) {
   .news-header{
-    width: 100%;
+    width: 120%;
     padding: 30px;
     text-align: center;
     background: #1abc9c;
@@ -380,7 +380,7 @@
 
 @media only screen and (max-device-width: 480px) {
   .widget{
-      width: 400px;
+      width: 300px;
   }
 }
 

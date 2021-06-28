@@ -9,6 +9,10 @@ if(isset($_GET['page'])){
 }
 $post_per_page=5;
 $result=($page-1)*$post_per_page;
+
+//$result = 0
+//$result = 5;
+//$result = 10
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +85,7 @@ $result=($page-1)*$post_per_page;
   
 <!--* Content Section -->
 <?php
-$postQuery="SELECT * FROM posts LIMIT $result,$post_per_page";
+$postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
 while($post=mysqli_fetch_assoc($runPQ)){
   ?>
@@ -142,20 +146,41 @@ while($post=mysqli_fetch_assoc($runPQ)){
 
 
 <?php
-
+$q="SELECT * FROM posts";
+$r=mysqli_query($conn,$q);
+$total_posts=mysqli_num_rows($r);
+$total_pages=ceil($total_posts/$post_per_page);
 ?>
 
 
 <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        <?php
+if($page>1){
+  $switch="";
+}else{
+  $switch="disabled";
+}
+if($page<$total_pages){
+  $nswitch="";
+}else{
+  $nswitch="disabled";
+}
+        ?>
+          <li class="page-item <?=$switch?>">
+            <a class="page-link" href="?page=<?=$page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+          <?php
+for($opage=1;$opage<=$total_pages;$opage++){
+            ?>
+            <li class="page-item"><a class="page-link" href="?page=<?=$opage?>"><?=$opage?></a></li>
+            <?php
+          }
+          ?>
+          
+          
+          <li class="page-item <?=$nswitch?>">
+            <a class="page-link" href="?page=<?=$page+1?>">Next</a>
           </li>
         </ul>
       </nav>

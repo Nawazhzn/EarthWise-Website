@@ -50,7 +50,7 @@
  <!--* Navbar  -->
  <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,10 +62,11 @@
         <li class="nav-item">
             <a class="nav-link text-white" href="index.php">Home</a>
           </li>
-          <!--
+          
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">News</a>
+            <a class="nav-link active text-white" href="#">Gallery</a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link active text-white" href="#">Article</a>
           </li>

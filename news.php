@@ -310,7 +310,7 @@
                         
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-1">
-                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
@@ -340,14 +340,6 @@
         </div>
     </div>
     <!--end code-->
-
-    
-<!-- start feedwind code (used freewind for live news update)--> 
-<div class="widget">
-<script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" 
-      preloader-text="Loading" data-fw-param="147605/"></script> 
-</div>
- <!-- end feedwind code -->
 
  <div class="container-fluid news-container">
     <div class='news-section'>

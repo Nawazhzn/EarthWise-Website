@@ -154,7 +154,7 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jonathan Amos</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Jonathan Amos</a></span>
                                                 <span class="news-date">May 19</span>
                                             </div>
                                         </div>
@@ -181,7 +181,7 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">AFT</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">AFT</a></span>
                                                 <span class="news-date">June 05, 2018</span>
                                             </div>
                                         </div>
@@ -208,7 +208,7 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Sirasa News 1st</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Sirasa News 1st</a></span>
                                                 <span class="news-date">June 14, 2021</span>
                                             </div>
                                         </div>

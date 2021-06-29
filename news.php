@@ -15,12 +15,17 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  
+
+
 </head>
 
 <body>
 
-  <!--* Navbar  -->
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
+
+<!--* Navbar  -->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
       <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
@@ -31,65 +36,52 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.php">Home</a>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" href="#">News</a>
+            <a class="nav-link active text-white" href="news.php">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="article.php">Article</a>
+            <a class="nav-link  text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
           </li>
-          <!-- <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Sign Up</a>
-          </li>
+          
           <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Login</a>
-          </li> -->
-          <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <i class="fa fa-user" style="font-size: 1rem;"></i>
-            Chanaka
-            <i class="fa fa-chevron-down" style="font-size: .8rem;"></i>
-           </a>
-            <ul class="dropdown">
-             <li>
-              <a class="nav-linkblack text-black" href="#" >Dashboard</a>
-             </li>
-             <li>
-              <a class="nav-linkred text-red" href="#">Logout</a>
-             </li>
-                
+          <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a class="nav-link text-white" href="#">
+            <i class="fa fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul >
+            
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+          </ul>
+        </li>
+      <?php else: ?>
+        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
+        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
+      <?php endif; ?>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-   </nav>
-  <br><br><br><br><br><br><br><br><br>
-
-  
-   <!--<div class="page-wrapper">
-   <div class="post-slider">
-    <h1 class="slider-title">Trending News</h1>-->
-      <!--<div class="post-wrapper">
-     <div class="post">1</div>
-     <div class="post">2</div>
-     <div class="post">3</div>
-     <div class="post">4</div>
-     <div class="post">5</div>
-    </div>   
-   </div>   
-   </div>-->
-
+  </nav>
+  <!--* Navbar  -->
+  <br><br><br> <br> <br>
+  <br> <br><br> <br> 
    <h1 class="news-header">EarthWise Trending News</h1>
+   <div class="climate-widget">
+   <script src="https://climateclock.world/widget-v2.js"></script>
+       <climate-clock />
 
+
+   </div>
 <!--Container-->
 <div class="container">
     <!--Start code-->
@@ -341,6 +333,18 @@
     </div>
     <!--end code-->
 
+<!--Live news rss section-->
+
+<!-- start feedwind code --> 
+<div class="">
+<script type="text/javascript" 
+src="https://feed.mikle.com/js/fw-loader.js"
+preloader-text="Loading" data-fw-param="147605/">
+</script>
+</div> 
+<!-- end feedwind code -->
+
+
  <div class="container-fluid news-container">
     <div class='news-section'>
       <div class="container-fluid news-container">
@@ -532,6 +536,9 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   
+  </div> 
+</div>
+
 
 <!--* Footer Section -->
 <div>
@@ -580,7 +587,5 @@
         </div>
       </div>
     </footer>
-  </div> 
-</div>
 </body>
 </html>

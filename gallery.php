@@ -63,14 +63,14 @@
             <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="news.php">News</a>
+            <a class="nav-link active text-white" href="#">Image Gallery</a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link active text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
-          </li>
+          </li> -->
           
           <div class="nav-divider"></div>
           <?php if (isset($_SESSION['id'])): ?>
@@ -97,6 +97,10 @@
   </nav>
   <!--* Navbar  -->
 
+  
+
+
+<div class="bg">
 
 
 		<div class="container">
@@ -104,13 +108,14 @@
                 <div class="col-md-12" align="center">
                 <img src="images/logo.png"><br><br>
                 <div id="dropZone">
-                    <h1>Drag & Drop Files...</h1>
+                    <h1>Drag & Drop Files</h1>
                     <input type="file" id="fileupload" name="attachments[]" multiple>
+                </div>
                 </div>
                 <h1 id="error"></h1><br><br>
                 <h1 id="progress"></h1><br><br>
                 <div id="files"></div>
-                </div>
+              
             </div>
 		</div>
         <div class="container" id="uploadedFiles">
@@ -121,13 +126,27 @@
         </div>
 
         <br><br>
+        <script>
+          document.getElementById("showdropzone").hide();
+          function myFunction() {
+            var x = document.getElementById("showdropzone");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+             x.style.display = "none";
+             }
+           } 
+      </script>
+
+</div>
+
         <!--* Footer Section -->
   <div class="footer-dark">
     <footer>
       <div class="container-fluid footer-container">
         <div class="row">
           <div class="col-sm-12 col-md-8 col-lg-3 footer-col-1">
-            <img src="img/earth-wise-logo.png" />
+          <img src="img/earth-wise-logo.png" />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.</p>
           </div>
@@ -232,7 +251,7 @@
                    if (!fileTypeAllowed.test(fileName))
                         $("#error").html('Only images are allowed!');
                    else if (fileSize > 500000)
-                       $("#error").html('Your file is too big! Max allowed size is: 500KB');
+                       $("#error").html('File is too big! Max size is: 500KB');
                    else {
                        $("#error").html("");
                        data.submit();
@@ -245,7 +264,7 @@
                         var path = data.jqXHR.responseJSON.path;
                         addImage(path, 0);
                     } else
-                        $("#error").html(msg);
+                     $("#error").html(msg);
                }).on('fileuploadprogressall', function(e,data) {
                     var progress = parseInt(data.loaded / data.total * 100, 10);
                     $("#progress").html("Completed: " + progress + "%");
@@ -259,6 +278,8 @@
 
                 $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
             }
+
+          
         </script>
 	</body>
 </html>

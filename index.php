@@ -345,7 +345,7 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="gallery-section">
     <div class="container-fluid">
       <div class="button-overlay">
-       <a href="galleryindex.php" button type="button" class="btn">VIEW ALL</button></a>
+       <a href="gallery.php" button type="button" class="btn">VIEW ALL</button></a>
       </div>
       <div class="photo-overlay"></div>
       <div class="row">

@@ -85,6 +85,16 @@ $result=($page-1)*$post_per_page;
   
 <!--* Content Section -->
 
+<?php
+function getPostThumb($conn,$id){
+  $query="SELECT * FROM images WHERE post_id=$id";
+  $run=mysqli_query($conn,$query);
+  $data = mysqli_fetch_assoc($run);
+  return $data['image'];
+}
+
+?>
+
 
 <?php
 $postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
@@ -96,9 +106,14 @@ while($post=mysqli_fetch_assoc($runPQ)){
   <div class="card mb-3" style="max-width: 800px">
   <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
             <div class="row g-0">
-              <div class="col-md-5" style="background-image: url('img/Article/tree.jpg');background-size: cover">
+            
+
+                
+              <div class="col-md-5" style="background-image: url('img/Article/<?=getPostThumb($conn,$post['id'])?>');background-size: cover">
               </div>
               <div class="col-md-7">
+
+                
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
                   <p class="card-text text-truncate"><?=$post['content']?></p>

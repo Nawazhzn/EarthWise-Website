@@ -35,7 +35,7 @@ body {
   color: red !important;
   font-weight: 400;
   font-size: 24px;
-  margin-left: 50px !important;
+  margin-left: 500px !important;
   padding-top: 30px;
   border-end-start-radius: 5px;
   border-end-end-radius: 5px;
@@ -120,23 +120,13 @@ body {
   display: block;
 }
 
-/**news page CSS*/
-.post-slider {
-  border: 1px solid red;
+.logout {
+  color: red;
 }
 
-.post-slider>.post-wrapper {
-  width: 84%;
-  height: 350px;
-  margin: 0px auto; 
-  border: 1px dashed red; 
-}
-.post-slider>.post-wrapper>.post {
-  width: 350px;
-  height: 300px;
-  display: inline-block;
-  background: #f0bb51;
-}
+
+
+
 
 /** Navbar Mobile (Collapse Navbar) CSS */
 
@@ -570,6 +560,7 @@ body {
   padding: 10px;
   padding-left: 70px;
   padding-right: 70px;
+  
 }
 
 .gallery-section>.container-fluid>.button-overlay>.btn:hover {
@@ -741,3 +732,5 @@ footer>.footer-container {
   }
 
 }
+
+

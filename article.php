@@ -1,3 +1,19 @@
+<?php 
+include("path.php");
+include(ROOT_PATH . "/app/database/db.php");
+if(isset($_GET['page'])){
+  $page=$_GET['page'];
+
+}else{
+  $page=1;
+}
+$post_per_page=5;
+$result=($page-1)*$post_per_page;
+
+//$result = 0
+//$result = 5;
+//$result = 10
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,20 +22,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Earth Wise</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon.png" />
+  
 </head>
 
 <body>
   <!--* Navbar  -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,49 +45,158 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">News</a>
+            <a class="nav-link text-white" href="news.php">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" href="#">Article</a>
+            <a class="nav-link active text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
           </li>
-          <!-- <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Sign Up</a>
-          </li>
+          
           <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Login</a>
-          </li> -->
-          <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <i class="fa fa-user" style="font-size: 1rem;"></i>
-            Chanaka
-            <i class="fa fa-chevron-down" style="font-size: .8rem;"></i>
-           </a>
-            <ul class="dropdown">
-             <li>
-              <a class="nav-linkblack text-black" href="#" >Dashboard</a>
-             </li>
-             <li>
-              <a class="nav-linkred text-red" href="#">Logout</a>
-             </li>
-                
+          <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a class="nav-link text-white" href="#">
+            <i class="fa fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul >
+            
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+          </ul>
+        </li>
+      <?php else: ?>
+        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
+        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
+      <?php endif; ?>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
+  <br><br><br> <br> <br>
   
+<!--* Content Section -->
+
+<?php
+function getPostThumb($conn,$id){
+  $query="SELECT * FROM images WHERE post_id=$id";
+  $run=mysqli_query($conn,$query);
+  $data = mysqli_fetch_assoc($run);
+  return $data['image'];
+}
+
+?>
+
+
+<?php
+$postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
+$runPQ=mysqli_query($conn,$postQuery);
+while($post=mysqli_fetch_assoc($runPQ)){
+  ?>
+   <div class="container m-auto mt-3 row">
+        <div class="col-8">
+  <div class="card mb-3" style="max-width: 800px">
+  <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
+            <div class="row g-0">
+            
+
+                
+              <div class="col-md-5" style="background-image: url('img/Article/<?=getPostThumb($conn,$post['id'])?>');background-size: cover">
+              </div>
+              <div class="col-md-7">
+
+                
+                <div class="card-body">
+                  <h5 class="card-title"><?=$post['title']?></h5>
+                  <p class="card-text text-truncate"><?=$post['content']?></p>
+                  <p class="card-text"><small class="text-muted">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
+                </div>
+              </div>
+            </div>
+                 </a>
+            
+
+          </div>
+          
+        </div>
+        </div>
+        </div>
+        
+        </div>
+
+      
+  <?php
+  
+  
+}
+
+
+?>
+
+    
+
+
+
+
+
+<?php
+$q="SELECT * FROM posts";
+$r=mysqli_query($conn,$q);
+$total_posts=mysqli_num_rows($r);
+$total_pages=ceil($total_posts/$post_per_page);
+?>
+
+
+
+<nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+        <?php
+if($page>1){
+  $switch="";
+}else{
+  $switch="disabled";
+}
+if($page<$total_pages){
+  $nswitch="";
+}else{
+  $nswitch="disabled";
+}
+        ?>
+        
+          <li class="page-item <?=$switch?>">
+            <a class="page-link" href="?page=<?=$page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <?php
+for($opage=1;$opage<=$total_pages;$opage++){
+            ?>
+            <li class="page-item"><a class="page-link" href="?page=<?=$opage?>"><?=$opage?></a></li>
+            <?php
+          }
+          ?>
+          
+          
+          <li class="page-item <?=$nswitch?>">
+            <a class="page-link" href="?page=<?=$page+1?>">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+ 
+  
+  
+
+
+
+
+
 
   <!--* Footer Section -->
   <div class="footer-dark">

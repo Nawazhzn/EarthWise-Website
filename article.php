@@ -3,13 +3,11 @@ include("path.php");
 include(ROOT_PATH . "/app/database/db.php");
 if(isset($_GET['page'])){
   $page=$_GET['page'];
-
 }else{
   $page=1;
 }
 $post_per_page=5;
 $result=($page-1)*$post_per_page;
-
 //$result = 0
 //$result = 5;
 //$result = 10
@@ -81,10 +79,10 @@ $result=($page-1)*$post_per_page;
       </div>
     </div>
   </nav>
+  <!--* Navbar  -->
   <br><br><br> <br> <br>
   
 <!--* Content Section -->
-
 <?php
 function getPostThumb($conn,$id){
   $query="SELECT * FROM images WHERE post_id=$id";
@@ -92,10 +90,7 @@ function getPostThumb($conn,$id){
   $data = mysqli_fetch_assoc($run);
   return $data['image'];
 }
-
 ?>
-
-
 <?php
 $postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
@@ -105,15 +100,10 @@ while($post=mysqli_fetch_assoc($runPQ)){
         <div class="col-8">
   <div class="card mb-3" style="max-width: 800px">
   <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
-            <div class="row g-0">
-            
-
-                
+            <div class="row g-0">  
               <div class="col-md-5" style="background-image: url('img/Article/<?=getPostThumb($conn,$post['id'])?>');background-size: cover">
               </div>
-              <div class="col-md-7">
-
-                
+              <div class="col-md-7"> 
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
                   <p class="card-text text-truncate"><?=$post['content']?></p>
@@ -122,30 +112,14 @@ while($post=mysqli_fetch_assoc($runPQ)){
               </div>
             </div>
                  </a>
-            
-
           </div>
-          
         </div>
         </div>
         </div>
-        
         </div>
-
-      
   <?php
-  
-  
 }
-
-
 ?>
-
-    
-
-
-
-
 
 <?php
 $q="SELECT * FROM posts";
@@ -153,8 +127,6 @@ $r=mysqli_query($conn,$q);
 $total_posts=mysqli_num_rows($r);
 $total_pages=ceil($total_posts/$post_per_page);
 ?>
-
-
 
 <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
@@ -170,7 +142,6 @@ if($page<$total_pages){
   $nswitch="disabled";
 }
         ?>
-        
           <li class="page-item <?=$switch?>">
             <a class="page-link" href="?page=<?=$page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
@@ -181,22 +152,12 @@ for($opage=1;$opage<=$total_pages;$opage++){
             <?php
           }
           ?>
-          
-          
           <li class="page-item <?=$nswitch?>">
             <a class="page-link" href="?page=<?=$page+1?>">Next</a>
           </li>
         </ul>
       </nav>
-
- 
-  
-  
-
-
-
-
-
+  <!--* Content Section -->
 
   <!--* Footer Section -->
   <div class="footer-dark">
@@ -244,6 +205,7 @@ for($opage=1;$opage<=$total_pages;$opage++){
         </div>
       </div>
     </footer>
+  <!--* Footer Section -->
   </div> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

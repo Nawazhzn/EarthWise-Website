@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,16 +12,9 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <link rel="icon" type="image/png" href="img/favicon.png" />
-
-  
-
-
 </head>
-
 <body>
-
 
 <!--* Navbar  -->
 <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
@@ -58,7 +50,6 @@
             <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
           </a>
           <ul >
-            
             <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
           </ul>
         </li>
@@ -73,16 +64,19 @@
     </div>
   </nav>
   <!--* Navbar  -->
-  <br><br><br> <br> <br>
-  <br> <br><br> <br> 
-   <h1 class="news-header">EarthWise Trending News</h1>
+  <br><br><br><br><br>
+  <br><br><br><br> 
+
+
+  
   
    <!-- <div class="climate-widget">
    <script src="https://climateclock.world/widget-v2.js"></script>
        <climate-clock /> -->
+</div>
 
+<h1 class="news-header">EarthWise Trending News</h1>
 
-   </div>
 <!--Container-->
 <div class="container">
     <!--Start code-->
@@ -99,7 +93,6 @@
                             <li data-target="#featured" data-slide-to="2"></li>
                             <li data-target="#featured" data-slide-to="3"></li>
                         </ol>
-                        
                         <!--carousel inner-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -127,7 +120,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -153,8 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                          
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -180,8 +171,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                           
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">

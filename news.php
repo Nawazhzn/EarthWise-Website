@@ -27,6 +27,8 @@ $result=($page-1)*$post_per_page;
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="icon" type="image/png" href="img/favicon.png" />
+  <script src="https://climateclock.world/widget-v2.js" async></script>
+  
 </head>
 <body>
 
@@ -84,11 +86,9 @@ $result=($page-1)*$post_per_page;
 
   
   
-   <!-- <div class="climate-widget">
-   <script src="https://climateclock.world/widget-v2.js"></script>
-       <climate-clock /> -->
+   
 </div>
-
+<div><climate-clock /></div>
 <h1 class="news-header">EarthWise Trending News</h1>
 
 <!--Container-->
@@ -351,19 +351,32 @@ preloader-text="Loading" data-fw-param="147605/">
 
 
  <div class="container-fluid news-container">
+
+ 
     <div class='news-section'>
+    
       <div class="container-fluid news-container">
+      
         <div class="row my-4">
+        
           <div class="col">
+          
             <div class="container-fluid">
+            
               <div class="row">
+              <?php
+$postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
+$runPQ=mysqli_query($conn,$postQuery);
+while($post=mysqli_fetch_assoc($runPQ)){
+  ?>
                 <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
+                
                   <div class="card news-card flex-fill">
                     <figure class="image">
                       <img src="img/home/news-1.jpg" alt="waves">
                     </figure>
                     <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
+                      <h2 class="title"><?=$post['title']?></h2>
                       <section class="content">
                         <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
                           incididunt ut
@@ -382,131 +395,9 @@ preloader-text="Loading" data-fw-param="147605/">
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
-                  <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-2.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
-                      <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
-                        <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
-                  <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-3.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
-                      <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
-                        <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
-                  <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-2.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
-                      <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
-                        <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
-                  <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-2.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
-                      <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
-                        <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
-                  <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-2.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
-                      <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
-                        <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button" onmouseover="">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
+                <?php
+}
+?>
               </div>
             </div>
           </div>
@@ -524,6 +415,8 @@ preloader-text="Loading" data-fw-param="147605/">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/153f93256e.js" crossorigin="anonymous"></script>
+  
+
   <script type="text/javascript">
 
 

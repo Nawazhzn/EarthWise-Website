@@ -144,16 +144,8 @@
   background-position-x: 100px;
 }
 
-@media screen and (max-width: 767px) {
-  .climate-widget{
-    position:-webkit-sticky;
-    
-  }
-}
-
 
 /** Navbar Mobile (Collapse Navbar) CSS */
-
 @media screen and (max-width: 767px) {
   .bg-dark {
     padding-bottom: 0px;

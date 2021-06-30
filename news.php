@@ -1,3 +1,17 @@
+<?php 
+include("path.php");
+include(ROOT_PATH . "/app/database/db.php");
+if(isset($_GET['page'])){
+  $page=$_GET['page'];
+}else{
+  $page=1;
+}
+$post_per_page=5;
+$result=($page-1)*$post_per_page;
+//$result = 0
+//$result = 5;
+//$result = 10
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

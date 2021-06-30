@@ -76,9 +76,10 @@
   <br><br><br> <br> <br>
   <br> <br><br> <br> 
    <h1 class="news-header">EarthWise Trending News</h1>
-   <div class="climate-widget">
+  
+   <!-- <div class="climate-widget">
    <script src="https://climateclock.world/widget-v2.js"></script>
-       <climate-clock />
+       <climate-clock /> -->
 
 
    </div>
@@ -119,7 +120,7 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Rupak De Chowdhuri</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Rupak De Chowdhuri</a></span>
                                                 <span class="news-date">07/06/2019</span>
                                             </div>
                                         </div>

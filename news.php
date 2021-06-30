@@ -6,7 +6,7 @@ if(isset($_GET['page'])){
 }else{
   $page=1;
 }
-$post_per_page=5;
+$post_per_page=6;
 $result=($page-1)*$post_per_page;
 //$result = 0
 //$result = 5;
@@ -350,6 +350,8 @@ preloader-text="Loading" data-fw-param="147605/">
 <!-- end feedwind code -->
 
 
+
+
  <div class="container-fluid news-container">
 
  
@@ -364,32 +366,49 @@ preloader-text="Loading" data-fw-param="147605/">
             <div class="container-fluid">
             
               <div class="row">
+              
               <?php
-$postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
+$postQuery="SELECT * FROM news ORDER BY id DESC LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
 while($post=mysqli_fetch_assoc($runPQ)){
   ?>
+ 
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <h2 class="title"><?=$post['title']?></h2>
+    
+
+
+
+
+
+    <p class="content"><?=$post['content']?></p>
+    <p class="date" style="font-style: italic;text-align: right;"><?=date('F jS,Y' ,strtotime($post['created_at'])) ?></p>
+    </div>
+  </div>
+</div>
                 <div class="col-sm-12 col-md-12 col-lg-4 d-flex">
                 
                   <div class="card news-card flex-fill">
-                    <figure class="image">
-                      <img src="img/home/news-1.jpg" alt="waves">
-                    </figure>
-                    <div class="card-box">
+                    
+                    <div class="card-box text-truncate">
                       <h2 class="title"><?=$post['title']?></h2>
                       <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
-                        </p>
-                        <p class="date">January 12, 2021</p>
+                        <p><?=$post['content']?></p>
+                        <p class="date"><?=date('F jS,Y' ,strtotime($post['created_at'])) ?></p>
                         <div class="row justify-content-end">
-                          <div class="col">
-                            <p class="button">Read more</p>
-                          </div>
-                          <div class="col-1">
-                            <span class="material-icons">arrow_forward</span>
-                          </div>
+                          
+                          
+                          
+
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Read More</button>
+                          
+
+
+
+
+
                         </div>
                       </section>
                     </div>

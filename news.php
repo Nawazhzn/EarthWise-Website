@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,14 +12,12 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
-
 <body>
 
-  <!--* Navbar  -->
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
+<!--* Navbar  -->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
       <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
@@ -31,64 +28,54 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.php">Home</a>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" href="#">News</a>
+            <a class="nav-link active text-white" href="news.php">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="article.php">Article</a>
+            <a class="nav-link  text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
           </li>
-          <!-- <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Sign Up</a>
-          </li>
+          
           <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Login</a>
-          </li> -->
-          <div class="nav-divider"></div>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <i class="fa fa-user" style="font-size: 1rem;"></i>
-            Chanaka
-            <i class="fa fa-chevron-down" style="font-size: .8rem;"></i>
-           </a>
-            <ul class="dropdown">
-             <li>
-              <a class="nav-linkblack text-black" href="#" >Dashboard</a>
-             </li>
-             <li>
-              <a class="nav-linkred text-red" href="#">Logout</a>
-             </li>
-                
+          <?php if (isset($_SESSION['id'])): ?>
+        <li>
+          <a class="nav-link text-white" href="#">
+            <i class="fa fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
+            <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          </a>
+          <ul >
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+          </ul>
+        </li>
+      <?php else: ?>
+        <li><a href="<?php echo BASE_URL . '/register.php' ?>" class="nav-link text-white" >Sign Up</a></li>
+        <li><a href="<?php echo BASE_URL . '/login.php' ?>" class="nav-link text-white">Login</a></li>
+      <?php endif; ?>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-   </nav>
-  <br><br><br><br><br><br><br><br><br>
+  </nav>
+  <!--* Navbar  -->
+  <br><br><br><br><br>
+  <br><br><br><br> 
+
 
   
-   <!--<div class="page-wrapper">
-   <div class="post-slider">
-    <h1 class="slider-title">Trending News</h1>-->
-      <!--<div class="post-wrapper">
-     <div class="post">1</div>
-     <div class="post">2</div>
-     <div class="post">3</div>
-     <div class="post">4</div>
-     <div class="post">5</div>
-    </div>   
-   </div>   
-   </div>-->
+  
+   <!-- <div class="climate-widget">
+   <script src="https://climateclock.world/widget-v2.js"></script>
+       <climate-clock /> -->
+</div>
 
-   <h1 class="news-header">EarthWise Trending News</h1>
+<h1 class="news-header">EarthWise Trending News</h1>
 
 <!--Container-->
 <div class="container">
@@ -106,7 +93,6 @@
                             <li data-target="#featured" data-slide-to="2"></li>
                             <li data-target="#featured" data-slide-to="3"></li>
                         </ol>
-                        
                         <!--carousel inner-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -127,14 +113,13 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Rupak De Chowdhuri</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Rupak De Chowdhuri</a></span>
                                                 <span class="news-date">07/06/2019</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -154,14 +139,13 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jonathan Amos</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Jonathan Amos</a></span>
                                                 <span class="news-date">May 19</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                          
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -181,14 +165,13 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">AFT</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">AFT</a></span>
                                                 <span class="news-date">June 05, 2018</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                           
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -208,7 +191,7 @@
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Sirasa News 1st</a></span>
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="">Sirasa News 1st</a></span>
                                                 <span class="news-date">June 14, 2021</span>
                                             </div>
                                         </div>
@@ -310,7 +293,7 @@
                         
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-1">
-                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                              <div class="card border-0 rounded-0 text-white overflow zoom">
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
@@ -341,13 +324,17 @@
     </div>
     <!--end code-->
 
-    
-<!-- start feedwind code (used freewind for live news update)--> 
-<div class="widget">
-<script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" 
-      preloader-text="Loading" data-fw-param="147605/"></script> 
-</div>
- <!-- end feedwind code -->
+<!--Live news rss section-->
+
+<!-- start feedwind code --> 
+<div class="">
+<script type="text/javascript" 
+src="https://feed.mikle.com/js/fw-loader.js"
+preloader-text="Loading" data-fw-param="147605/">
+</script>
+</div> 
+<!-- end feedwind code -->
+
 
  <div class="container-fluid news-container">
     <div class='news-section'>
@@ -540,6 +527,9 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   
+  </div> 
+</div>
+
 
 <!--* Footer Section -->
 <div>
@@ -588,7 +578,5 @@
         </div>
       </div>
     </footer>
-  </div> 
-</div>
 </body>
 </html>

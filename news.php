@@ -374,17 +374,13 @@ while($post=mysqli_fetch_assoc($runPQ)){
   ?>
  
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-xxlg">
     <div class="modal-content">
-    <h2 class="title"><?=$post['title']?></h2>
+    <h2 class="title" style="text-align:center"><?=$post['title']?></h2>
     
 
-
-
-
-
-    <p class="content"><?=$post['content']?></p>
-    <p class="date" style="font-style: italic;text-align: right;"><?=date('F jS,Y' ,strtotime($post['created_at'])) ?></p>
+    <p class="content" style="padding:10px;" style="margin: 10px;"><?=$post['content']?></p>
+    <p class="date" style="text-align: right; padding-right:10px " ><?=date('F jS,Y' ,strtotime($post['created_at'])) ?></p>
     </div>
   </div>
 </div>
@@ -392,17 +388,17 @@ while($post=mysqli_fetch_assoc($runPQ)){
                 
                   <div class="card news-card flex-fill">
                     
-                    <div class="card-box text-truncate">
+                    <div class="card-box text-truncate" style="height: 350px;">
                       <h2 class="title"><?=$post['title']?></h2>
                       <section class="content">
-                        <p><?=$post['content']?></p>
+                        <p style="font-size:small" style="margin:20px" ><?=$post['content']?></p>
                         <p class="date"><?=date('F jS,Y' ,strtotime($post['created_at'])) ?></p>
                         <div class="row justify-content-end">
                           
                           
                           
 
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Read More</button>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="margin-top: 220px;">Read More</button>
                           
 
 

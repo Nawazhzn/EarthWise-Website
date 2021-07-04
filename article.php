@@ -96,18 +96,18 @@ $postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
 while($post=mysqli_fetch_assoc($runPQ)){
   ?>
-   <div class="container m-auto mt-3 row">
+   <div class="container m-auto mt-3 row"">
         <div class="col-8">
   <div class="card mb-3" style="max-width: 800px">
   <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
             <div class="row g-0">  
               <div class="col-md-5" style="background-image: url('img/Article/<?=getPostThumb($conn,$post['id'])?>');background-size: cover">
               </div>
-              <div class="col-md-7"> 
+              <div class="col-md-7" > 
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
                   <p class="card-text text-truncate"><?=$post['content']?></p>
-                  <p class="card-text"><small class="text-muted">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
+                  <p class="card-text"><small class="text-muted" style="margin: top 500px;">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
                 </div>
               </div>
             </div>

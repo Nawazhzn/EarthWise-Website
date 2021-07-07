@@ -36,7 +36,7 @@ $result=($page-1)*$post_per_page;
 <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
       <a class="navbar-brand" href="index.php"></a>
-      <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
+      <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo" style="margin-top:20px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

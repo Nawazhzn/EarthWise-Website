@@ -335,10 +335,7 @@ include(ROOT_PATH . "/app/database/db.php")
     <div class="container-fluid">
       <h1 class="topic">EXPLORE GALLERY</h1>
       <p class="sub-topic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam ipsa earum
-        quibusdam,<br />atque
-        ipsum
-        error maiores natus iusto fugit.
+      Our image gallery is a complete photo gallery with photos of harsh moments of climate change. <br>It is a valuable place to see what these harsh conditions looks like are.
       </p>
     </div>
   </div>

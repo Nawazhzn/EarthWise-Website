@@ -63,7 +63,7 @@ guestsOnly();
             <?php if($_SESSION['admin']): ?>
               <li><a href="<?php echo BASE_URL . '/admin/dashboard.php' ?>">Dashboard</a></li>
             <?php endif; ?>
-            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-link text-white">Logout</a></li>
           </ul>
         </li>
       <?php else: ?>

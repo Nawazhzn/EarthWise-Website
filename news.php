@@ -66,7 +66,7 @@ $result=($page-1)*$post_per_page;
             <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
           </a>
           <ul >
-            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-link text-white">Logout</a></li>
           </ul>
         </li>
       <?php else: ?>

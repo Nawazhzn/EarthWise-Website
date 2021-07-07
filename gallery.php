@@ -82,7 +82,7 @@
           </a>
           <ul >
             
-            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkred text-red">Logout</a></li>
+            <li><a href="<?php echo BASE_URL . '/logout.php' ?>" class="nav-linkwhite ">Logout</a></li>
           </ul>
         </li>
       <?php else: ?>

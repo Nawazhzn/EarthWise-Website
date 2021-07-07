@@ -121,7 +121,9 @@ body {
 }
 
 .logout {
-  color: red;
+  color:white;
+  background: transparent;
+  text-decoration: none;
 }
 
 

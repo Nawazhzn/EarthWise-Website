@@ -122,8 +122,10 @@ body {
 
 .logout {
   color:white;
+  margin-top: -20px;
   background: transparent;
   text-decoration: none;
+  font-size: small;
 }
 
 

@@ -465,8 +465,8 @@ include(ROOT_PATH . "/app/database/db.php")
         <div class="row">
           <div class="col-sm-12 col-md-8 col-lg-3 footer-col-1">
             <img src="img/earth-wise-logo.png" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.</p>
+            <p>Climate change includes both global warming driven by human-induced emissions of greenhouse gases and the resulting large-scale shifts in weather patterns. 
+            Though there have been previous periods of climatic change</p>
           </div>
           <div class="col-md-4 col-lg-6 footer-col-2">
             <ul>

@@ -182,7 +182,7 @@ include(ROOT_PATH . "/app/database/db.php")
             </div>
           </div>
         </div>
-        <div class="cover-bottom-text">Lorem ipsum dolor sit amet</div>
+        <div class="cover-bottom-text">Vital Signs of our planet</div>
       </div>
     </div>
   </div>
@@ -192,10 +192,7 @@ include(ROOT_PATH . "/app/database/db.php")
     <div class='news-section'>
       <h1 class="topic">LATEST NEWS</h1>
       <p class="sub-topic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam ipsa earum
-        quibusdam,<br />atque
-        ipsum
-        error maiores natus iusto fugit.
+      What is climate change? Is it the same as global warming? When did climate become a hot topic in the world’s agenda? <br /> What are its main causes and consequences? 
       </p>
       <div class="container-fluid news-container">
         <div class="row my-4">
@@ -208,11 +205,9 @@ include(ROOT_PATH . "/app/database/db.php")
                       <img src="img/home/news-1.jpg" alt="waves">
                     </figure>
                     <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
+                      <h2 class="title">How our planet has changed over time</h2>
                       <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
+                        <p>It can be challenging to visualize the effects of climate change when it happens over time and on such a large scale
                         </p>
                         <p class="date">January 12, 2021</p>
                         <div class="row justify-content-end">

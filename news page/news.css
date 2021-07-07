@@ -89,7 +89,7 @@
   float: left;
   width: 250px;
   padding: 10px;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .nav-divider {
@@ -101,7 +101,7 @@
 
 .dropdown {
   position: absolute;
-  top: 65px;
+  top: 90px;
   right: auto;
   width: auto;
   display: none;
@@ -115,13 +115,39 @@
 .logout {
   color: red;
 }
+.news-header{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 50px;
+  position:absolute;
+  top: 100px;
+}
 
+@media screen and (max-width: 767px) {
+  .news-header{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    position:absolute;
+    top: 100px;
+    margin-top: -20px;
+    margin-bottom: -40px;
+  }
+}
 
-
+.climate-widget{
+  position:relative;
+  background-position-x: 100px;
+}
 
 
 /** Navbar Mobile (Collapse Navbar) CSS */
-
 @media screen and (max-width: 767px) {
   .bg-dark {
     padding-bottom: 0px;
@@ -177,11 +203,12 @@
     display: block;
   }
   
+  .slider-title{
+     align-content: center;
+  }
 }
 
-
-
-/**news page CSS*/
+/**news page CSS
 .post-slider {
     border: 1px solid red;
   }
@@ -196,9 +223,175 @@
     width: 350px;
     height: 300px;
     display: inline-block;
-    background: #f0bb51;
+    background: transparent;
+    
+  } */
+  
+/** News Section CSS */
+
+.news-container {
+  width: 80vw;
+  align-items: flex-start !important;
+  padding: 0px !important;
+}
+
+.news-section {
+  padding-top: 120px;
+}
+
+.news-section>.topic {
+  color: #5A5A5A;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.news-section>.sub-topic {
+  color: #5A5A5A;
+  font-size: 25px;
+}
+
+.news-container {
+  padding-top: 20px;
+}
+
+.news-card {
+  border-radius: 10px;
+  border-width: 0px;
+  background-color: #F3F3F3;
+  margin: 8px;
+  margin-bottom: 30px;
+}
+
+.news-card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.1s;
+}
+
+.news-card>.image>img {
+  width: max-content;
+  height: auto;
+  display: block;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.news-card>.card-box {
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.news-card>.card-box>.title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  color: #444444;
+}
+
+.news-card>.card-box>.content {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #818181;
+}
+
+.news-card>.card-box>.content>.date {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 2px;
+  color: #818181;
+}
+
+.news-card>.card-box>.content>.row>.col>.button {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 2px;
+  color: #818181;
+}
+
+.news-card>.card-box>.content>.row>.col-1 {
+  margin-top: -11px !important;
+}
+
+.news-card>.card-box>.content>.row>.col-1>span {
+  font-size: 15px;
+}
+
+.news-container>.btn {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 22px;
+  color: #444444;
+  background-color: #FBD27F;
+  margin-top: 0px;
+  margin-bottom: 140px;
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.news-container>.btn:hover {
+  background-color: #f0bb51;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 767px) {
+  .news-container {
+    width: 90vw;
   }
   
+}
+
+
+
+/*verticle news section*/
+
+.b-0 {
+  bottom: 0;
+}
+.bg-shadow {
+  background: rgba(76, 76, 76, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), 
+  color-stop(100%, rgba(19, 19, 19, 0.8)));
+  background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+.top-indicator {
+  right: 0;
+  top: 1rem;
+  bottom: inherit;
+  left: inherit;
+  margin-right: 1rem;
+}
+.overflow {
+  position: relative;
+  overflow: hidden;
+}
+.zoom img {
+  transition: all 0.2s linear;
+}
+.zoom:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.widget{
+  width: 300px;
+  background:fixed;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .widget{
+      width: 300px;
+  }
+}
+
+
 
   /** Footer Section CSS */
 

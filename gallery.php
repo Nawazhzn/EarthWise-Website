@@ -36,19 +36,19 @@
     $sql = $conn->query("SELECT id FROM photos");
     $numRows = $sql->num_rows;
 ?>
-
 <html>
 	<head>
-		<title> Image Gallery</title>
-        <link rel="icon" type="image/png" href="img/favicon.png" />
+		<title>Image Gallery</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
          <link rel="stylesheet" href="php gallery/gallery.css">
     </head>
+	<body>
 
 
- <!--* Navbar  -->
- <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
+    <!--* Navbar  -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3" style="background-color: #212529;" >
     <div class="container-fluid"  >
       <a class="navbar-brand" href="index.php"></a>
       <img src="img/earth-wise-logo.png" alt="logo" class="nav-logo">
@@ -60,15 +60,13 @@
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link text-white" href="index.php">Home</a>
+            <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
-          
           <li class="nav-item">
             <a class="nav-link active text-white" href="#">Gallery</a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="#">Article</a>
+         <!-- <li class="nav-item">
+            <a class="nav-link active text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white aa" href="#">Explore</a>
@@ -97,133 +95,58 @@
       </div>
     </div>
   </nav>
-  <br><br>
+  <!--* Navbar  -->
+
+  
 
 
-    <div class="bgcon">
-	<body>
-   
-   <h1 class="maintitle">Image Gallery</h1>
+<div class="bg">
+
 
 		<div class="container">
             <div class="row">
                 <div class="col-md-12" align="center">
+                <img src="images/logo.png"><br><br>
                 <div id="dropZone">
-                    <h1 >Drag & Drop Files...</h1>
+                    <h1>Drag & Drop Files</h1>
                     <input type="file" id="fileupload" name="attachments[]" multiple>
                 </div>
-                <h1 id="error"></h1><br><br>
-                <br><br>
-                <div id="files"></div>
                 </div>
-            
+                <h1 id="error"></h1><br><br>
+                <h1 id="progress"></h1><br><br>
+                <div id="files"></div>
+              
             </div>
 		</div>
         <div class="container" id="uploadedFiles">
             <div class="row">
                 <!-- <div class="col-md-3 myImg"></div> -->
             </div>
+            
         </div>
-        </div>
 
-		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script src="js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
-		<script src="js/jquery.iframe-transport.js" type="text/javascript"></script>
-		<script src="js/jquery.fileupload.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                getImages(0, <?php echo $numRows ?>);
-            });
+        <br><br>
+        <script>
+          document.getElementById("showdropzone").hide();
+          function myFunction() {
+            var x = document.getElementById("showdropzone");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+             x.style.display = "none";
+             }
+           } 
+      </script>
 
-            function getImages(start, max) {
-                if (start > max)
-                    return;
+</div>
 
-                $.ajax({
-                    url: 'index.php',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: {
-                        getImages: 1,
-                        start: start
-                    }, success: function (response) {
-                        for (var i=0; i < response.images.length; i++)
-                            addImage("uploads/" + response.images[i].path, response.images[i].id);
-
-                        getImages((start+8), max);
-                    }
-                });
-            }
-
-            function delImg(id) {
-                if (id === 0)
-                    alert('You are not able to delete this image now!');
-                else if (confirm('Are you sure that you want to delete this image?')) {
-                    $.ajax({
-                        url: 'index.php',
-                        method: 'POST',
-                        dataType: 'text',
-                        data: {
-                            delImage: 1,
-                            id: id
-                        }, success: function (response) {
-                            $("#img_"+id).remove();
-                        }
-                    });
-                }
-            }
-
-            $(function () {
-               var files = $("#files");
-
-               $("#fileupload").fileupload({
-                   url: 'index.php',
-                   dropZone: '#dropZone',
-                   dataType: 'json',
-                   autoUpload: false
-               }).on('fileuploadadd', function (e, data) {
-                   var fileTypeAllowed = /.\.(gif|jpg|png|jpeg)$/i;
-                   var fileName = data.originalFiles[0]['name'];
-                   var fileSize = data.originalFiles[0]['size'];
-
-                   if (!fileTypeAllowed.test(fileName))
-                        $("#error").html('Only images are allowed!');
-                   else if (fileSize > 500000)
-                       $("#error").html('Your file is too big! Max allowed size is: 500KB');
-                   else {
-                       $("#error").html("");
-                       data.submit();
-                   }
-               }).on('fileuploaddone', function(e, data) {
-                    var status = data.jqXHR.responseJSON.status;
-                    var msg = data.jqXHR.responseJSON.msg;
-
-                    if (status == 1) {
-                        var path = data.jqXHR.responseJSON.path;
-                        addImage(path, 0);
-                    } else
-                        $("#error").html(msg);
-               }).on('fileuploadprogressall', function(e,data) {
-                    var progress = parseInt(data.loaded / data.total * 100, 10);
-                    $("#progress").html("Completed: " + progress + "%");
-               });
-            });
-
-            function addImage(path, id) {
-                if ($("#uploadedFiles").find('.row:last').find('.myImg').length === 4)
-                    $("#uploadedFiles").append('<div class="row"></div>');
-
-
-                $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
-            }
-        </script>
- <!--* Footer Section -->
- <div class="footer-dark">
+        <!--* Footer Section -->
+  <div class="footer-dark">
     <footer>
       <div class="container-fluid footer-container">
         <div class="row">
           <div class="col-sm-12 col-md-8 col-lg-3 footer-col-1">
-            <img src="img/earth-wise-logo.png" />
+          <img src="img/earth-wise-logo.png" />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.</p>
           </div>
@@ -263,9 +186,100 @@
         </div>
       </div>
     </footer>
-  </div> 
+  <!--* Footer Section -->
+
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+		<script src="js/jquery.iframe-transport.js" type="text/javascript"></script>
+		<script src="js/jquery.fileupload.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                getImages(0, <?php echo $numRows ?>);
+            });
+
+            function getImages(start, max) {
+                if (start > max)
+                    return;
+
+                $.ajax({
+                    url: 'gallery.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        getImages: 1,
+                        start: start
+                    }, success: function (response) {
+                        for (var i=0; i < response.images.length; i++)
+                            addImage("uploads/" + response.images[i].path, response.images[i].id);
+
+                        getImages((start+8), max);
+                    }
+                });
+            }
+
+            function delImg(id) {
+                if (id === 0)
+                    alert('You are not able to delete this image now!');
+                else if (confirm('Are you sure that you want to delete this image?')) {
+                    $.ajax({
+                        url: 'gallery.php',
+                        method: 'POST',
+                        dataType: 'text',
+                        data: {
+                            delImage: 1,
+                            id: id
+                        }, success: function (response) {
+                            $("#img_"+id).remove();
+                        }
+                    });
+                }
+            }
+
+            $(function () {
+               var files = $("#files");
+
+               $("#fileupload").fileupload({
+                   url: 'gallery.php',
+                   dropZone: '#dropZone',
+                   dataType: 'json',
+                   autoUpload: false
+               }).on('fileuploadadd', function (e, data) {
+                   var fileTypeAllowed = /.\.(gif|jpg|png|jpeg)$/i;
+                   var fileName = data.originalFiles[0]['name'];
+                   var fileSize = data.originalFiles[0]['size'];
+
+                   if (!fileTypeAllowed.test(fileName))
+                        $("#error").html('Only images are allowed!');
+                   else if (fileSize > 500000)
+                       $("#error").html('File is too big! Max size is: 500KB');
+                   else {
+                       $("#error").html("");
+                       data.submit();
+                   }
+               }).on('fileuploaddone', function(e, data) {
+                    var status = data.jqXHR.responseJSON.status;
+                    var msg = data.jqXHR.responseJSON.msg;
+
+                    if (status == 1) {
+                        var path = data.jqXHR.responseJSON.path;
+                        addImage(path, 0);
+                    } else
+                     $("#error").html(msg);
+               }).on('fileuploadprogressall', function(e,data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    $("#progress").html("Completed: " + progress + "%");
+               });
+            });
+
+            function addImage(path, id) {
+                if ($("#uploadedFiles").find('.row:last').find('.myImg').length === 4)
+                    $("#uploadedFiles").append('<div class="row"></div>');
 
 
+                $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
+            }
 
+          
+        </script>
 	</body>
 </html>

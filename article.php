@@ -3,12 +3,14 @@ include("path.php");
 include(ROOT_PATH . "/app/database/db.php");
 if(isset($_GET['page'])){
   $page=$_GET['page'];
-
 }else{
   $page=1;
 }
 $post_per_page=5;
 $result=($page-1)*$post_per_page;
+//$result = 0
+//$result = 5;
+//$result = 10
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,97 +79,85 @@ $result=($page-1)*$post_per_page;
       </div>
     </div>
   </nav>
+  <!--* Navbar  -->
   <br><br><br> <br> <br>
   
 <!--* Content Section -->
 <?php
-$postQuery="SELECT * FROM posts LIMIT $result,$post_per_page";
+function getPostThumb($conn,$id){
+  $query="SELECT * FROM images WHERE post_id=$id";
+  $run=mysqli_query($conn,$query);
+  $data = mysqli_fetch_assoc($run);
+  return $data['image'];
+}
+?>
+<?php
+$postQuery="SELECT * FROM posts ORDER BY id DESC LIMIT $result,$post_per_page";
 $runPQ=mysqli_query($conn,$postQuery);
 while($post=mysqli_fetch_assoc($runPQ)){
   ?>
-  <div class="card mb-3" style="max-width: 100%;">
+   <div class="container m-auto mt-3 row"">
+        <div class="col-8">
+  <div class="card mb-3" style="max-width: 800px">
   <a href="post.php?id=<?=$post['id']?>" style="text-decoration: none;color:black">
-            <div class="row g-0">
-              <div class="col-md-2" style="background-image: url('img/Article/tree.jpg');background-size: cover">
+            <div class="row g-0">  
+              <div class="col-md-5" style="background-image: url('img/Article/<?=getPostThumb($conn,$post['id'])?>');background-size: cover">
               </div>
-              <div class="col-md-7">
+              <div class="col-md-7" > 
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
                   <p class="card-text text-truncate"><?=$post['content']?></p>
-                  <p class="card-text"><small class="text-muted">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
+                  <p class="card-text"><small class="text-muted" style="margin: top 500px;">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></small></p>
                 </div>
               </div>
             </div>
-</a>
+                 </a>
           </div>
-  <!-- <div class="wrapper-art">
-  <header class="header"><h1><?=$post['title']?></h1></header>
-  <figure class="featured-art-image-1">
-      <img src="img/Article/turtle.jpg" alt="">
-   </figure> 
-   <article class="article article-1">
-    <h2><?=$post['title']?></h2>
-    <p>In 1985 Aldus Corporation launched its first desktop publishing program Aldus PageMaker for Apple Macintosh computers.</p>
-  </article>
-  <figure class="featured-art-image-2">
-      <img src="img/Article/forest.jpg" alt="">
-   </figure>
-  
-  <article class="article article-2">
-    <h2>Variants</h2>
-    <p>Released in 1987 for PCs running Windows 1.0.</p>
-  </article>
-  <figure class="featured-art-image-3">
-      <img src="img/Article/polar-bear.jpg" alt="">
-   </figure>
- 
-  <article class="article article-3">
-    <h2>When not to use it</h2>
-    <p>The toppings you may chose for that TV dinner pizza slice when you forgot to shop for foods, the paint you may slap on your face to impress the new boss is your business. But what about your daily bread?</p>
-  </article>
-  <figure class="featured-art-image-4">
-      <img src="img/Article/garbag.jpg" alt="">
-   </figure>
- 
-  <article class="article article-4">
-    <h2>So Lorem Ipsum is bad</h2>
-    <p>One of the villagers, Kristina Halvorson from Adaptive Path, holds steadfastly to the notion that design can’t be tested without real content.</p>
-  </article>
-   </div> -->
-
+        </div>
+        </div>
+        </div>
+        </div>
   <?php
 }
 ?>
 
-
-
 <?php
-
+$q="SELECT * FROM posts";
+$r=mysqli_query($conn,$q);
+$total_posts=mysqli_num_rows($r);
+$total_pages=ceil($total_posts/$post_per_page);
 ?>
-
 
 <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        <?php
+if($page>1){
+  $switch="";
+}else{
+  $switch="disabled";
+}
+if($page<$total_pages){
+  $nswitch="";
+}else{
+  $nswitch="disabled";
+}
+        ?>
+          <li class="page-item <?=$switch?>">
+            <a class="page-link" href="?page=<?=$page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+          <?php
+for($opage=1;$opage<=$total_pages;$opage++){
+            ?>
+            <li class="page-item"><a class="page-link" href="?page=<?=$opage?>"><?=$opage?></a></li>
+            <?php
+          }
+          ?>
+          <li class="page-item <?=$nswitch?>">
+            <a class="page-link" href="?page=<?=$page+1?>">Next</a>
           </li>
         </ul>
       </nav>
-
- 
-  
-  
-
-
-
-
-
+  <!--* Content Section -->
 
   <!--* Footer Section -->
   <div class="footer-dark">
@@ -215,6 +205,7 @@ while($post=mysqli_fetch_assoc($runPQ)){
         </div>
       </div>
     </footer>
+  <!--* Footer Section -->
   </div> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

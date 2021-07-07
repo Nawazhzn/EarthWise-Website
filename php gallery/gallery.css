@@ -308,7 +308,7 @@
 
 
 
-.bgcon{
+.bg{
     background-color: grey;
     font-family: 'Poppins';
     -webkit-font-smoothing: antialiased;
@@ -325,7 +325,7 @@
   text-align: center;
 }
     #dropZone {
-        border: 3px dashed black;
+        border: 1px dashed black;
         padding: 50px;
         width: 500px;
         margin-top: 20px;
@@ -334,12 +334,12 @@
     #files {
         border: 1px dotted #0088cc;
         padding: 20px;
-        width: 200px;
+        width: auto;
         display: none;
     }
 
     #error {
-        color: red;
+        color: rgb(255, 58, 58);
     }
 
     .container, .row {
@@ -348,4 +348,13 @@
 
     #uploadedFiles img {
         width: 100% !important;
+    }
+
+    @media screen and (max-width: 767px) {
+      dropZone {
+        border: 1px dashed black;
+        padding: 50px;
+        width: 250px;
+        margin-top: 20px;
+    }
     }

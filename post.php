@@ -1,6 +1,7 @@
 <?php 
 include("path.php");
-include(ROOT_PATH . "/app/database/db.php")
+include(ROOT_PATH . "/app/database/db.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,13 +85,85 @@ include(ROOT_PATH . "/app/database/db.php")
 
           ?>
             <div class="card mb-3" >
+            <?php
+
+function getCategory($conn,$id){
+    $query="SELECT * FROM category WHERE id=$id";
+    $run=mysqli_query($conn,$query);
+    $data = mysqli_fetch_assoc($run);
+    return $data['name'];
+}
+
+
+function getImagesByPost($conn,$post_id){
+  $query="SELECT * FROM images WHERE post_id=$post_id";
+  $run=mysqli_query($conn,$query);
+  $data = array();
+
+  while($d=mysqli_fetch_assoc($run)){
+    $data[]=$d;
+  }
+  return $data;
+  
+}
+
+
+
+
+?>
                 
                 <div class="card-body">
                   <h5 class="card-title"><?=$post['title']?></h5>
                   <span class="badge bg-primary ">Posted On <?=date('F jS,Y' ,strtotime($post['created_at'])) ?></span>
-                  <span class="badge bg-danger">Topic</span>
+                  <span class="badge bg-danger"><?=getCategory($conn,$post['category_id'])?></span>
                   <div class="border-bottom mt-3"></div>
-                  <img src="img/Article/tree.jpg" class="img-fluid mb-2 mt-2" alt="Responsive image">
+
+<?php
+$post_images=getImagesByPost($conn,$post['id']);
+?>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+<?php
+$c=1;
+foreach($post_images as $image){
+  if($c>1){
+    $sw = "";
+
+  }else{
+    $sw = "active";
+  }
+  ?>
+
+<div class="carousel-item <?=$sw?>">
+      <img src="img/Article/<?=$image['image']?>" class="d-block w-100" alt="...">
+    </div>
+
+  <?php
+  $c++;
+}
+  ?>
+
+
+
+    
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+                  <!-- <img src="img/Article/tree.jpg" class="img-fluid mb-2 mt-2" alt="Responsive image"> -->
+
+
                   <p class="card-text"><?=$post['content']?></p>
                   
 

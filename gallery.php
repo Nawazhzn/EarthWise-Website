@@ -63,7 +63,7 @@
             <a class="nav-link text-white" href="<?php echo BASE_URL . '/index.php' ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" href="#">Image Gallery</a>
+            <a class="nav-link active text-white" href="#">Gallery</a>
           </li>
          <!-- <li class="nav-item">
             <a class="nav-link active text-white" href="article.php">Article</a>

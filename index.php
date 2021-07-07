@@ -43,7 +43,7 @@ include(ROOT_PATH . "/app/database/db.php")
             <a class="nav-link text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white aa" href="#">Explore</a>
+            <a class="nav-link text-white aa" href="gallery.php">Gallery</a>
           </li>
           <div class="nav-divider"></div>
           <?php if (isset($_SESSION['id'])): ?>

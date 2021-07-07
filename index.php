@@ -228,11 +228,10 @@ include(ROOT_PATH . "/app/database/db.php")
                       <img src="img/home/news-2.jpg" alt="waves">
                     </figure>
                     <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
+                      <h2 class="title">NASA and the new urgency of climate change</h2>
                       <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
+                        <p>Environmental Defense Fund’s MethaneSAT is to be “launch ready” 
+                        in September 2022. Credit: Ball Aerospace Corp.
                         </p>
                         <p class="date">January 12, 2021</p>
                         <div class="row justify-content-end">
@@ -253,11 +252,11 @@ include(ROOT_PATH . "/app/database/db.php")
                       <img src="img/home/news-3.jpg" alt="waves">
                     </figure>
                     <div class="card-box">
-                      <h2 class="title">LOREM IPSUM DOLOR SIT AMET</h2>
+                      <h2 class="title">Protesting Climate Change </h2>
                       <section class="content">
-                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit, sed do eiusmod tempor
-                          incididunt ut
-                          labore et dolore magna cua temopor.
+                        <p>Young People Take to Streets in a Global Strike,
+                        Anxious about their future on a hotter planet and angry at world leaders
+                         
                         </p>
                         <p class="date">January 12, 2021</p>
                         <div class="row justify-content-end">

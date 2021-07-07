@@ -65,12 +65,12 @@
           <li class="nav-item">
             <a class="nav-link active text-white" href="#">Gallery</a>
           </li>
-         <!-- <li class="nav-item">
+         <li class="nav-item">
             <a class="nav-link active text-white" href="article.php">Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white aa" href="#">Explore</a>
-          </li> -->
+            <a class="nav-link text-white aa" href="gallery.php">Gallery</a>
+          </li> 
           
           <div class="nav-divider"></div>
           <?php if (isset($_SESSION['id'])): ?>

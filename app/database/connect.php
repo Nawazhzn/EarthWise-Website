@@ -1,9 +1,9 @@
 <?php
 
-$host = 'freedb.tech';
-$user = 'freedbtech_webassig';
-$pass = 'webassig';
-$db_name = 'freedbtech_webassig';
+$host = 'server165.web-hosting.com';
+$user = 'digisvll_earthwiseu';
+$pass = 'W6naYX3cLRA0';
+$db_name = 'digisvll_earthwise';
 
 
 $conn = new MySQLi($host, $user, $pass, $db_name);

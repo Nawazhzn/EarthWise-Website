@@ -288,13 +288,13 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">How do we know climate change is real?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">How is the climate change happening?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>model1</p>
+        <p>As we know, earth’s climate is changing throughout the history. Most of the climate changes have small variations. In present, the global warming is happened as a result of human activity since the 20th century. Scientists have enabled satellites and different type of technical advanced devices to see the big picture and collect information about the climate change. Those data collected over many years. They analyze the changes and identify the periods of climate changes.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -307,13 +307,13 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Why is the climate change happening?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>model2</p>
+        <p>There are many reasons for climate changes. Main 2 reasons are natural and human inducted factors. These climate changes are always happened on earth. Greenhouse gases in the atmosphere absorbs the heat radiation. After the industrial revolution, the amount of greenhouse gases increased in atmosphere. It makes more heat retention and an increase in surface temperatures. The Intergovernmental Panel on Climate Change, which consist of more than 1,300 scientists from all the countries, forecasts a temperature rise of 2.5 to 10 degrees Fahrenheit over the next century. The drought seasons in southwest will be more intense and the cold waves will become low everywhere. The temperature is the summer season will be increased and the reduction of soil moisture is a main reason for that. In the mid-century, the ice level in the arctic ocean going to be very low in summer. The thing is temperature rise will not be linear. Part of what makes climate change so urgent is that temperatures will continue to increase long after greenhouse gas emissions are curbed. Scientists are telling that the melting of glaziers going to be increase the sea water level and it will change the entire climate system on the earth.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -326,13 +326,13 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">What are the effects of climate change?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>model3</p>
+        <p>Climate changes happen because of physical environment, eco systems and human inducted factors. From those, human caused climate change is very harmful for the sustainability. Most of the climatic changes are already visible. Extreme weather events, glazier retreat, seasonal changes, sea level rise and declines in arctic sea ice are some examples. Since 1980s, ocean has taken up around 20% to 30% of human inducted CO2. This is a reason for ocean acidification. The ocean is also warming since 1970s. Also, the ocean absorbed more than 90% of heat in the atmosphere. The impact from the climate change to the eco systems and humans is very high. When it combines with climate variability, it can happen food insecurity and it can be a harmful effect to the fresh water supply.  Also, it leads to make a negative effect to the human health. Climate changes also have an effect to the desertification and land degradation all around the world. In near future, the change of the climate will be a huge problem. As prevention methods we can reduce greenhouse gas emissions and adapt to unchangeable climatic effects. By focusing limited time frame we can find the impacts for global climate change, ecosystems and human societies and change those issues that affect for the long term climate change impacts.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -345,13 +345,13 @@ include(ROOT_PATH . "/app/database/db.php")
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">What is being done to solve climate change?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>model4</p>
+        <p>Climate change is one of the most complex issues facing us today. It involves many dimensions – science, economics, society, politics and moral and ethical questions – and is a global problem, felt on local scales, that will be around for decades and centuries to come. Carbon dioxide, the heat-trapping greenhouse gas that has driven recent global warming, lingers in the atmosphere for hundreds of years, and the planet (especially the oceans) takes a while to respond to warming. So even if we stopped emitting all greenhouse gases today, global warming and climate change will continue to affect future generations. In this way, humanity is “committed” to some level of climate change.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
